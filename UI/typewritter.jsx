@@ -1,8 +1,9 @@
 "use client";
+
 import { useState, useEffect } from "react";
 
 export default function Typewriter() {
-  const texts = ["FullStack Developer", "Web Designer", "Software Engineer"];
+  const texts = ["Backend Developer", "Web Designer", "Software Engineer"];
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
@@ -39,7 +40,7 @@ export default function Typewriter() {
   return (
     <h1 className="text-3xl lg:text-5xl font-bold mt-2">
       {currentText}
-      <span className="text-[--pink]">|</span>
+      <span className="text-primary">|</span>
     </h1>
   );
 }

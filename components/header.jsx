@@ -1,51 +1,64 @@
 "use client";
 
-import { IoPersonSharp } from "react-icons/io5";
-import { MdLightMode, MdDarkMode } from "react-icons/md";
+import { MdMenu, MdLightMode, MdDarkMode } from "react-icons/md";
 import Button from "@/UI/Button";
 import Link from "next/link";
+import { useState } from "react";
 import "../styles/navlink.css";
 import { useTheme } from "@/context/ThemeContext";
+import Sidebar from "./sub/sidebar";
 
 export default function Header() {
+  const [show, setShow] = useState(false);
   const { theme, toggleTheme } = useTheme();
+
   return (
     <div
       id="header"
-      className="w-full min-h-20 z-10 flex justify-between px-10 py-5 fixed shadow-md dark:border-none border-b border-gray-200 bg-[--bgheader] dark:text-white"
+      className="w-full min-h-20 z-10 flex justify-between items-center px-7 py-5 fixed shadow-md bg-transparent backdrop-blur-md"
     >
       <div>
-        <Button type="button" variant="round">
-          <IoPersonSharp className="text-xl" />
+        <Button
+          type="button"
+          variant="round"
+          text="large"
+          onClick={() => setShow(true)}
+        >
+          <MdMenu />
         </Button>
+        <Sidebar show={show} setShow={setShow} />
       </div>
+
+      <div className="md:hidden text-sm text-slate-500">Peace Be Upon You</div>
+
       <nav className="hidden md:flex flex-wrap items-center gap-5 text-sm">
-        <Link href="/" className="nav-link">
+        <Link href="/" className="nav-link text-body hover:text-primary">
           HOME
         </Link>
-        <Link href="#experience" className="nav-link">
+        <Link
+          href="#experience"
+          className="nav-link text-body hover:text-primary"
+        >
           EXPERIENCES
         </Link>
-        <Link href="#skill" className="nav-link">
+        <Link href="#skill" className="nav-link text-body hover:text-primary">
           SKILLS
         </Link>
-        <Link href="#pricing" className="nav-link">
+        <Link href="#pricing" className="nav-link text-body hover:text-primary">
           PRICING
         </Link>
-        <Link href="#project" className="nav-link">
+        <Link href="#project" className="nav-link text-body hover:text-primary">
           PROJECTS
         </Link>
-        <Link href="#blog" className="nav-link">
+        <Link href="#blog" className="nav-link text-body hover:text-primary">
           BLOG
         </Link>
       </nav>
+
+      {/* Theme Toggle */}
       <div>
-        <Button type="button" onClick={toggleTheme} variant="square">
-          {theme === "light" ? (
-            <MdDarkMode className="text-xl" />
-          ) : (
-            <MdLightMode className="text-xl" />
-          )}
+        <Button type="button" text="large" onClick={toggleTheme} variant="rect">
+          {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
         </Button>
       </div>
     </div>

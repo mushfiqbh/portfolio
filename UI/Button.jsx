@@ -2,6 +2,7 @@ export default function Button({
   children,
   type = "button",
   onClick,
+  text = "normal",
   className = "",
   variant = "rect",
 }) {
@@ -11,44 +12,33 @@ export default function Button({
     items-center
     justify-center
     font-semibold 
-    text-xl 
-    text-[--pink]
-    bg-[--bgheader] 
-    shadow-lg 
-    shadow-black/10 
-    dark:shadow-white/10 
+    ${text === "small" && "text-sm"} 
+    ${text === "large" && "text-xl"} 
+    ${text === "normal" && "text-lg"} 
+    text-body 
+    bg-gradient-box 
+    shadow-shadow1 
     focus:outline-none 
     transition 
     transform 
-    hover:-translate-y-0.5 
-    hover:shadow-lg 
-    hover:bg-[--pink]
 `;
 
   const baseStyles = {
     rect: `
-    px-6 py-3 
-    rounded-md
-  `,
-    square: `
-    p-3
-    rounded-md
+    p-4 
+    rounded-lg
   `,
     round: `
     w-12 h-12 
     flex items-center justify-center 
-    rounded-full
-    focus:ring-2 
-    focus:ring-offset-2 
-    focus:ring-[--pink] 
+    rounded-full  
   `,
   };
 
   const hoverStyles = `
-    hover:bg-gradient-to-r 
-    hover:from-purple-500 
-    hover:to-[--pink] 
-    hover:text-white
+    hover:text-white 
+    hover:-translate-y-0.5 
+    hover:bg-gradient-red 
   `;
 
   const combinedStyles = `${baseStyles[variant]} ${commonStyles} ${hoverStyles} ${className}`;
