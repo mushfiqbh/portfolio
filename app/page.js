@@ -1,7 +1,10 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
 import Pricing from "@/components/pricing";
 import Project from "@/components/project";
+import Resume from "@/components/resume";
+import Skill from "@/components/skill";
 import Presenter from "@/components/sub/presenter";
 import Testimonial from "@/components/testimonial";
 
@@ -10,11 +13,13 @@ export default function Home() {
     <div id="home">
       <Header />
       <Hero />
-      <Testimonial />
-      <Presenter />
+      <Resume />
+      <Skill />
       <Project />
       <Pricing />
-      <footer className="">footer</footer>
+      <Testimonial />
+      <Presenter />
+      <Footer />
     </div>
   );
 }

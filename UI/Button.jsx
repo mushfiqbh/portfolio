@@ -1,6 +1,6 @@
 export default function Button({
   children,
-  type = "button",
+  type = "none",
   onClick,
   text = "normal",
   className = "",

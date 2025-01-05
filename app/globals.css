@@ -6,8 +6,8 @@
 @tailwind utilities;
 
 :root {
-  /* Default (Light) Theme */
-  --color-primary: #ff014f;
+  /* Default (Light) Theme ff014f */
+  --color-primary: rgb(0, 200, 200);
   --color-heading: #1e2125;
   --color-body: #3c3e41;
   --background: #ecf0f3;
@@ -24,7 +24,7 @@
 
 .dark {
   /* Dark Theme */
-  --color-primary: #ff014f;
+  --color-primary: #5eead4;
   --color-body: #878e99;
   --color-heading: #ffffff;
   --background: #212428;
@@ -38,5 +38,5 @@
 body {
   background: var(--background);
   color: var(--color-body);
-  font-family: var(--font-primary);
+  font-family: var(--font-secondary);
 }

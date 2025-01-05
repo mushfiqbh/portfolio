@@ -11,7 +11,7 @@ export default function Project() {
   return (
     <div id="project">
       <Headline
-        title="Projects"
+        title="My Projects"
         subtitle="Projects I've worked on"
       />
       {projects.map((project, index) => (
@@ -27,7 +27,7 @@ export default function Project() {
             />
           </div>
           <div className="w-full lg:w-3/5 bg-transparent p-5 md:p-12 rounded-tr-lg rounded-br-lg">
-            <p>{project.bio}</p>
+            <p className="text-primary">{project.bio}</p>
             <h1 className="text-4xl text-heading font-bold py-2">
               {project.title}
             </h1>

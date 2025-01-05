@@ -1,4 +1,5 @@
 import headshot from "./headshot.jpg";
+import head_shot from "./headshot.png";
 import client0 from "./client0.png";
 import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
@@ -68,44 +69,46 @@ const projects = [
 
 const pricings = [
   {
-    title: "Landing Page",
-    framework: "React",
+    title: "Frontend",
+    framework: "HTML/ Wordpress",
     price: 50,
-    info: "Single-page website for showcasing products or services.",
+    info: "Basic website with essential features with potentially a lightweight CMS.",
     features: [
-      "Call-to-Action",
-      "About Us Section",
-      "Testimonials Section",
+      "Simple Portfolio",
+      "About Us Page",
       "Contact Form",
+      "HTML/ CSS/ JS",
+      "ReactJs Single Page Application",
       "Responsive Design",
-      "SEO Optimization",
+      "Wordpress",
     ],
   },
 
   {
-    title: "Blog Website",
-    framework: "WordPress",
-    price: 150,
-    info: "Professional blog with customizable themes and SEO tools.",
+    title: "Full Stack",
+    framework: "ReactJs/ NextJs, NodeJs",
+    price: 100,
+    info: "Functional website with key functionalities (contact forms, e-commerce, blog) includes a server-side language and a database and a framework",
     features: [
-      "Blog Post Creation & Management",
+      "Custom Design",
       "Customizable Layouts",
-      "SEO Plugins Integration",
-      "Social Media Sharing",
-      "Comment System",
+      "SEO Optimized Integration",
+      "NextJs/ ReactJs",
+      "NodeJs",
+      "MySQL/ Mongodb/ PostgreSQL",
       "Email Subscription",
     ],
   },
   {
-    title: "E-commerce Website",
-    framework: "Next.js",
-    price: 250,
-    info: "High-performance e-commerce store with advanced features.",
+    title: "Enterprise Level",
+    framework: "NodeJs, Django/ Flask",
+    price: 150,
+    info: "Complex, customized website with advanced features (e-commerce, integrations, custom designs) and also may involve more specialized technologies, dedicated project manager",
     features: [
       "Custom Product Pages",
       "Shopping Cart & Checkout",
-      "Order Management",
-      "Inventory Tracking",
+      "Cloud hosting",
+      "AI/ML integrations",
       "Payment Gateways Integration",
       "SEO Optimization",
       "Responsive Design",
@@ -113,4 +116,4 @@ const pricings = [
   },
 ];
 
-export { reviews, projects, pricings, headshot };
+export { reviews, projects, pricings, headshot, head_shot };
