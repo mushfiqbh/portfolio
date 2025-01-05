@@ -66,4 +66,51 @@ const projects = [
   },
 ];
 
-export { reviews, projects, headshot };
+const pricings = [
+  {
+    title: "Landing Page",
+    framework: "React",
+    price: 50,
+    info: "Single-page website for showcasing products or services.",
+    features: [
+      "Call-to-Action",
+      "About Us Section",
+      "Testimonials Section",
+      "Contact Form",
+      "Responsive Design",
+      "SEO Optimization",
+    ],
+  },
+
+  {
+    title: "Blog Website",
+    framework: "WordPress",
+    price: 150,
+    info: "Professional blog with customizable themes and SEO tools.",
+    features: [
+      "Blog Post Creation & Management",
+      "Customizable Layouts",
+      "SEO Plugins Integration",
+      "Social Media Sharing",
+      "Comment System",
+      "Email Subscription",
+    ],
+  },
+  {
+    title: "E-commerce Website",
+    framework: "Next.js",
+    price: 250,
+    info: "High-performance e-commerce store with advanced features.",
+    features: [
+      "Custom Product Pages",
+      "Shopping Cart & Checkout",
+      "Order Management",
+      "Inventory Tracking",
+      "Payment Gateways Integration",
+      "SEO Optimization",
+      "Responsive Design",
+    ],
+  },
+];
+
+export { reviews, projects, pricings, headshot };

@@ -3,7 +3,7 @@
 import { MdMenu, MdLightMode, MdDarkMode } from "react-icons/md";
 import Button from "@/UI/Button";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "../styles/navlink.css";
 import { useTheme } from "@/context/ThemeContext";
 import Sidebar from "./sub/sidebar";
@@ -11,11 +11,25 @@ import Sidebar from "./sub/sidebar";
 export default function Header() {
   const [show, setShow] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const sidebarRef = useRef(null);
+
+  const handleOutsideClick = (event) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   return (
     <div
       id="header"
-      className="w-full min-h-20 z-10 flex justify-between items-center px-7 py-5 fixed shadow-md bg-transparent backdrop-blur-md"
+      className="w-full min-h-20 z-10 flex justify-between items-center px-7 md:px-20 py-5 fixed shadow-md bg-transparent backdrop-blur-md"
     >
       <div>
         <Button
@@ -26,7 +40,7 @@ export default function Header() {
         >
           <MdMenu />
         </Button>
-        <Sidebar show={show} setShow={setShow} />
+        <Sidebar sidebarRef={sidebarRef} show={show} setShow={setShow} />
       </div>
 
       <div className="md:hidden text-sm text-slate-500">Peace Be Upon You</div>

@@ -12,12 +12,12 @@ export default function Project() {
     <div id="project">
       <Headline
         title="Projects"
-        subtitle="Here is a sample of projects I've worked on"
+        subtitle="Projects I've worked on"
       />
       {projects.map((project, index) => (
         <div
           key={index}
-          className="w-full md:w-3/4 lg:w-3/4 bg-foreground mx-auto my-20 md:flex lg:flex items-center rounded-lg shadow-shadow1"
+          className="w-full md:w-3/4 lg:w-3/4 bg-gradient-box mx-auto my-20 md:flex lg:flex items-center rounded-lg shadow-shadow1"
         >
           <div className="mx-5 lg:mx-0 md:w-2/5 lg:w-2/5 shadow-shadow1">
             <Image
@@ -44,7 +44,7 @@ export default function Project() {
                   className="font-normal p-2"
                 >
                   <FaCode />
-                  View Source
+                  Source Code
                 </Button>
               </Link>
               <Link href={project.live}>

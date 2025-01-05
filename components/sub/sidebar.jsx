@@ -2,14 +2,15 @@ import Button from "@/UI/Button";
 import Link from "next/link";
 import { IoMdClose } from "react-icons/io";
 
-export default function Sidebar({ show, setShow }) {
+export default function Sidebar({ sidebarRef, show, setShow }) {
   return (
     show && (
       <div
-        id="sidbar"
-        className="fixed z-20 inset-0 w-3/4 min-h-screen bg-background shadow-shadow2"
+        id="sidebar"
+        ref={sidebarRef}
+        className="fixed z-20 inset-0 w-3/5 md:w-1/6 min-h-screen bg-background shadow-shadow2"
       >
-        <div className="p-7">
+        <div className="p-7 md:pl-20">
           <Button
             type="button"
             variant="round"
@@ -20,7 +21,7 @@ export default function Sidebar({ show, setShow }) {
             <IoMdClose />
           </Button>
         </div>
-        <nav className="flex flex-col items-start gap-5 p-7">
+        <nav className="flex flex-col items-start gap-5 p-10 md:pl-20">
           <Link href="/" className="nav-link text-body hover:text-primary">
             HOME
           </Link>

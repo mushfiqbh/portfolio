@@ -38,7 +38,7 @@ export default function Typewriter() {
   }, [currentText, isDeleting, textIndex, texts, typingSpeed]);
 
   return (
-    <h1 className="text-3xl lg:text-5xl font-bold mt-2">
+    <h1 className="text-2xl lg:text-5xl font-bold mt-2">
       {currentText}
       <span className="text-primary">|</span>
     </h1>

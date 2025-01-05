@@ -17,9 +17,6 @@ export default function Presenter() {
           X
         </div>
         <Image src={headshot} alt="presenting" className="w-24 rounded-lg" />
-        <p className="w-fit text-primary bg-background opacity-80 px-2 rounded-full text-right -translate-y-7 translate-x-14">
-          Hello
-        </p>
       </div>
     )
   );

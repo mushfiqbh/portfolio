@@ -14,7 +14,7 @@ import { CiLocationOn, CiMail } from "react-icons/ci";
 
 export default function AboutInfo() {
   return (
-    <div className="w-full xl:w-1/2 p-10 xl:p-20 bg-background text-body">
+    <div className="w-full xl:w-1/2 p-7 xl:p-20 bg-background text-body">
       <h1 className="text-4xl xl:text-6xl font-bold">
         Hi, I'm <span className="text-primary">Mushfiq</span>
       </h1>

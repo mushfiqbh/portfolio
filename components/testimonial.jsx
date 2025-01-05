@@ -18,7 +18,7 @@ export default function Testimonial() {
           <Image
             src={client.pic}
             alt="client pic"
-            className="w-1/2 h-48 md:h-60 lg:w-full rounded-lg object-cover"
+            className="hidden md:block w-1/2 h-48 md:h-60 lg:w-full rounded-lg object-cover"
           />
           <h3 className="text-2xl font-bold pt-4">{client.name}</h3>
           <p className="text-slate-500 py-2">{client.rule}</p>
