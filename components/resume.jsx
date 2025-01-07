@@ -21,13 +21,16 @@ export default function Resume() {
                 <h3>Leading University (2023 - Present)</h3>
               </div>
               <div>
-                <Button text="small" className="text-primary">3.8</Button>
+                <Button text="small" className="text-primary">
+                  3.8
+                </Button>
               </div>
             </div>
             <HLine className="w-full my-5 md:my-7" />
             <div>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-              tempore quam voluptate error eum debitis recusandae ab?
+              I have been learning Data Structures and Algorithm, System design,
+              competitive programming etc. Also Perticipating programming
+              contests including icpc.
             </div>
           </div>
 
@@ -35,18 +38,20 @@ export default function Resume() {
             <div className="w-full flex justify-between">
               <div>
                 <h1 className="text-2xl font-bold md:text-3xl mb-2">
-                  Higher Secondary School Certificate
+                  A Level HSC Certificate
                 </h1>
                 <h3>BAF Shaheen College, Shamshernagar (2019 - 2021)</h3>
               </div>
               <div>
-                <Button text="small" className="text-primary">5.0</Button>
+                <Button text="small" className="text-primary">
+                  5.0
+                </Button>
               </div>
             </div>
             <HLine className="w-full my-5 md:my-7" />
             <div>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-              tempore quam voluptate error eum debitis recusandae ab?
+              I learned things in science background. Also worked in extra
+              curricular activities.
             </div>
           </div>
         </div>
@@ -56,41 +61,24 @@ export default function Resume() {
             Job Experiences
           </h2>
 
-          <div className="h-80 md:my-10 p-10 bg-gradient-box rounded-lg shadow-shadow1">
-            <div className="w-full flex justify-between">
-              <div>
-                <h1 className="text-2xl font-bold md:text-3xl mb-2">
-                  Professional Freelancer
-                </h1>
-                <h3>Upwork & Fiverr (2022 - Present)</h3>
-              </div>
-              <div>
-                <Button text="small" className="text-primary">5.0*</Button>
-              </div>
-            </div>
-            <HLine className="w-full my-5 md:my-7" />
-            <div>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-              tempore quam voluptate error eum debitis recusandae ab?
-            </div>
-          </div>
-
           <div className="h-80 my-0 md:my-10 p-10 bg-gradient-box rounded-lg shadow-shadow1">
             <div className="w-full flex justify-between">
               <div>
                 <h1 className="text-2xl font-bold md:text-3xl mb-2">
-                  Remote Job
+                  Full Time Professional Freelancer
                 </h1>
-                <h3>USA (2023 - 2024)</h3>
+                <h3>Upwork & Fiverr (2022 - Present)</h3>
               </div>
               <div>
-                <Button text="small" className="text-primary">5.0*</Button>
+                <Button text="small" className="text-primary">
+                  5.0*
+                </Button>
               </div>
             </div>
             <HLine className="w-full my-5 md:my-7" />
             <div>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-              tempore quam voluptate error eum debitis recusandae ab?
+              I working on custom web design, full stack web development, figma
+              to website and achiving new experiences with modern projects
             </div>
           </div>
         </div>

@@ -26,13 +26,19 @@ export default function Sidebar({ sidebarRef, show, setShow }) {
             HOME
           </Link>
           <Link
-            href="#experience"
+            href="#resume"
             className="nav-link text-body hover:text-primary"
           >
-            EXPERIENCES
+            RESUME
           </Link>
           <Link href="#skill" className="nav-link text-body hover:text-primary">
             SKILLS
+          </Link>
+          <Link
+            href="#project"
+            className="nav-link text-body hover:text-primary"
+          >
+            PROJECTS
           </Link>
           <Link
             href="#pricing"
@@ -41,10 +47,10 @@ export default function Sidebar({ sidebarRef, show, setShow }) {
             PRICING
           </Link>
           <Link
-            href="#project"
+            href="#testimonial"
             className="nav-link text-body hover:text-primary"
           >
-            PROJECTS
+            TESTIMONIAL
           </Link>
           <Link href="#blog" className="nav-link text-body hover:text-primary">
             BLOG

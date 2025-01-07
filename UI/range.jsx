@@ -10,7 +10,7 @@ export default function Range({ name, percent }) {
           {percent}%
         </div>
         <div
-          className="h-2 rounded-full bg-gradient-to-r from-teal-600 to-teal-400"
+          className="h-2 rounded-full bg-gradient-to-br from-teal-300 to-teal-400"
           style={{ width: `${percent}%` }}
         ></div>
       </div>

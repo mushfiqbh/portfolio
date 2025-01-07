@@ -1,5 +1,4 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
+import Blog from "@/components/blog";
 import Hero from "@/components/hero";
 import Pricing from "@/components/pricing";
 import Project from "@/components/project";
@@ -11,15 +10,14 @@ import Testimonial from "@/components/testimonial";
 export default function Home() {
   return (
     <div id="home">
-      <Header />
       <Hero />
       <Resume />
       <Skill />
       <Project />
       <Pricing />
       <Testimonial />
+      <Blog />
       <Presenter />
-      <Footer />
     </div>
   );
 }

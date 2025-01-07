@@ -6,8 +6,9 @@
 @tailwind utilities;
 
 :root {
-  /* Default (Light) Theme ff014f */
+  /* Default (Light) Theme */
   --color-primary: rgb(0, 200, 200);
+  --color-pink: #ff014f;
   --color-heading: #1e2125;
   --color-body: #3c3e41;
   --background: #ecf0f3;
@@ -25,6 +26,7 @@
 .dark {
   /* Dark Theme */
   --color-primary: #5eead4;
+  --color-pink: #ff014f;
   --color-body: #878e99;
   --color-heading: #ffffff;
   --background: #212428;
@@ -33,6 +35,19 @@
   --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
   --gradient-box: linear-gradient(145deg, #1e2024, #23272b);
   --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

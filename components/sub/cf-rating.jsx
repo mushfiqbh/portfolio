@@ -11,6 +11,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import Link from "next/link";
 
 export default function CodeforcesRating() {
   const handle = "mushfiqbh";
@@ -61,7 +62,14 @@ export default function CodeforcesRating() {
       ) : (
         <>
           <h1 className="text-[12px] mb-2">
-            My Problem Solving Rating Progress on Codeforces
+            My Problem Solving Rating Progress on &nbsp;
+            <Link
+              href="https://codeforces.com/profile/mushfiqbh"
+              target="_blank"
+              className="underline"
+            >
+              Codeforces
+            </Link>
           </h1>
           <Paper elevation={3} sx={{ pt: 2, pb: 1, pr: 2, pl: 1 }}>
             <ResponsiveContainer width="100%" height={250}>

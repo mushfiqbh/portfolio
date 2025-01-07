@@ -17,6 +17,7 @@ export default {
       },
       colors: {
         primary: "var(--color-primary)",
+        pink: "var(--color-pink)",
         body: "var(--color-body)",
         heading: "var(--color-heading)",
         background: "var(--background)",
@@ -25,6 +26,8 @@ export default {
       backgroundImage: {
         "gradient-box": "var(--gradient-box)",
         "gradient-red": "var(--gradient-red-hover)",
+        "--gradient-text":
+          "text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500;",
       },
       boxShadow: {
         shadow1: "var(--shadow-1)",

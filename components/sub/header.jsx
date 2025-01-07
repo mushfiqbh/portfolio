@@ -1,12 +1,11 @@
 "use client";
 
 import { MdMenu, MdLightMode, MdDarkMode } from "react-icons/md";
+import { useRef, useState, useEffect } from "react";
+import { useTheme } from "@/context/ThemeContext";
 import Button from "@/UI/Button";
 import Link from "next/link";
-import { useRef, useState, useEffect } from "react";
-import "../styles/navlink.css";
-import { useTheme } from "@/context/ThemeContext";
-import Sidebar from "./sub/sidebar";
+import Sidebar from "./sidebar";
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -50,27 +49,29 @@ export default function Header() {
         <Link href="/" className="nav-link text-body hover:text-primary">
           HOME
         </Link>
-        <Link
-          href="#experience"
-          className="nav-link text-body hover:text-primary"
-        >
-          EXPERIENCES
+        <Link href="#resume" className="nav-link text-body hover:text-primary">
+          RESUME
         </Link>
         <Link href="#skill" className="nav-link text-body hover:text-primary">
           SKILLS
         </Link>
+        <Link href="#project" className="nav-link text-body hover:text-primary">
+          PROJECTS
+        </Link>
         <Link href="#pricing" className="nav-link text-body hover:text-primary">
           PRICING
         </Link>
-        <Link href="#project" className="nav-link text-body hover:text-primary">
-          PROJECTS
+        <Link
+          href="#testimonial"
+          className="nav-link text-body hover:text-primary"
+        >
+          TESTIMONIAL
         </Link>
         <Link href="#blog" className="nav-link text-body hover:text-primary">
           BLOG
         </Link>
       </nav>
 
-      {/* Theme Toggle */}
       <div>
         <Button type="button" text="large" onClick={toggleTheme} variant="rect">
           {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
