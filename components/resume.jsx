@@ -12,7 +12,7 @@ export default function Resume() {
             Educational Quality
           </h2>
 
-          <div className="h-80 my-0 md:my-10 p-10 bg-gradient-box rounded-lg shadow-shadow1">
+          <div className="min-h-80 md:my-10 p-10 bg-gradient-box rounded-lg shadow-shadow1">
             <div className="w-full flex justify-between">
               <div>
                 <h1 className="text-2xl font-bold md:text-3xl mb-2">
@@ -34,7 +34,7 @@ export default function Resume() {
             </div>
           </div>
 
-          <div className="h-80 my-0 md:my-10 p-10 bg-gradient-box rounded-lg shadow-shadow1">
+          <div className="min-h-80 md:my-10 p-10 bg-gradient-box rounded-lg shadow-shadow1">
             <div className="w-full flex justify-between">
               <div>
                 <h1 className="text-2xl font-bold md:text-3xl mb-2">
@@ -61,7 +61,7 @@ export default function Resume() {
             Job Experiences
           </h2>
 
-          <div className="h-80 my-0 md:my-10 p-10 bg-gradient-box rounded-lg shadow-shadow1">
+          <div className="min-h-80 md:my-10 p-10 bg-gradient-box rounded-lg shadow-shadow1">
             <div className="w-full flex justify-between">
               <div>
                 <h1 className="text-2xl font-bold md:text-3xl mb-2">
