@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import Headline from "./headline";
 import Button from "@/UI/Button";
 
-export const ContactMe = () => {
+export default function ContactMe(){
   const [status, setStatus] = useState("Send Now");
   const form = useRef();
 
