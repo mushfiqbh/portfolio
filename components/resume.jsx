@@ -40,7 +40,7 @@ export default function Resume() {
                 <h1 className="text-2xl font-bold md:text-3xl mb-2">
                   A Level HSC Certificate
                 </h1>
-                <h3>BAF Shaheen College, Shamshernagar (2019 - 2021)</h3>
+                <h3>BAF Shaheen College, Shamshernagar (2019 - 2022)</h3>
               </div>
               <div>
                 <Button text="small" className="text-primary">
@@ -71,7 +71,7 @@ export default function Resume() {
               </div>
               <div>
                 <Button text="small" className="text-primary">
-                  5.0*
+                  4.9*
                 </Button>
               </div>
             </div>

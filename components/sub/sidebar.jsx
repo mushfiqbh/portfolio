@@ -55,6 +55,12 @@ export default function Sidebar({ sidebarRef, show, setShow }) {
           <Link href="#blog" className="nav-link text-body hover:text-primary">
             BLOG
           </Link>
+          <Link
+            href="#contact"
+            className="nav-link text-body hover:text-primary"
+          >
+            CONTACT ME (Anonymously)
+          </Link>
         </nav>
       </div>
     )

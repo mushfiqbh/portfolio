@@ -74,6 +74,9 @@ export default function Header() {
         <Link href="#blog" className="nav-link text-body hover:text-primary">
           BLOG
         </Link>
+        <Link href="#contact" className="nav-link text-body hover:text-primary">
+          CONTACT
+        </Link>
       </nav>
 
       <div>

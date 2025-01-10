@@ -5,6 +5,7 @@ import Project from "@/components/project";
 import Resume from "@/components/resume";
 import Skill from "@/components/skill";
 import Presenter from "@/components/sub/presenter";
+import ContactMe from "@/components/sub/contact";
 import Testimonial from "@/components/testimonial";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Pricing />
       <Testimonial />
       <Blog />
+      <ContactMe />
       <Presenter />
     </div>
   );
