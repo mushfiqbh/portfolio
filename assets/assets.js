@@ -1,13 +1,56 @@
 import headshot from "./headshot.jpg";
-import head_shot from "./headshot.png";
 import client0 from "./client0.png";
 import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
 import foodApp from "./food-app.png";
 import landingPage from "./landing.png";
 import workout from "./workout.jpg";
+import { IoServer } from "react-icons/io5";
+import { FaReact, FaNodeJs } from "react-icons/fa6";
+import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
+import { HiServer } from "react-icons/hi";
+import { PiFileCppBold } from "react-icons/pi";
+import { DiJsBadge } from "react-icons/di";
+import { MdWeb } from "react-icons/md";
+import { TbCodeAsterisk, TbBrandKotlin, TbBrandDjango } from "react-icons/tb";
+import { FaDocker, FaGitAlt, FaInfinity, FaAws } from "react-icons/fa";
+import {
+  SiPython,
+  SiTypescript,
+  SiFirebase,
+  SiMongodb,
+  SiMysql,
+  SiPostgresql,
+} from "react-icons/si";
 
-const reviews = [
+export { headshot };
+
+export const icons = {
+  frontend: MdWeb,
+  backend: HiServer,
+  database: IoServer,
+  devops: FaInfinity,
+  reactjs: FaReact,
+  nextjs: RiNextjsLine,
+  coding: TbCodeAsterisk,
+  cpp: PiFileCppBold,
+  python: SiPython,
+  js: DiJsBadge,
+  ts: SiTypescript,
+  kotlin: TbBrandKotlin,
+  node: FaNodeJs,
+  tailwind: RiTailwindCssFill,
+  django: TbBrandDjango,
+  git: FaGitAlt,
+  firebase: SiFirebase,
+  mongodb: SiMongodb,
+  mysql: SiMysql,
+  postgresql: SiPostgresql,
+  docker: FaDocker,
+  aws: FaAws,
+};
+
+export const reviews = [
   {
     id: 0,
     pic: client0,
@@ -40,7 +83,7 @@ const reviews = [
   },
 ];
 
-const projects = [
+export const projects = [
   {
     bio: "Food Delivery App",
     title: "Order and Sell Foods",
@@ -67,7 +110,7 @@ const projects = [
   },
 ];
 
-const pricings = [
+export const pricings = [
   {
     title: "Frontend",
     framework: "HTML/ Wordpress",
@@ -115,5 +158,3 @@ const pricings = [
     ],
   },
 ];
-
-export { reviews, projects, pricings, headshot, head_shot };

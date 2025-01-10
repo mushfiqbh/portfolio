@@ -28,7 +28,6 @@ export default function Header() {
   return (
     <div
       id="header"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       className="w-full min-h-20 z-10 flex justify-between items-center px-7 md:px-20 py-5 fixed shadow-md bg-transparent backdrop-blur-md"
     >
       <div>
@@ -43,7 +42,12 @@ export default function Header() {
         <Sidebar sidebarRef={sidebarRef} show={show} setShow={setShow} />
       </div>
 
-      <div className="md:hidden text-sm text-slate-500">Peace Be Upon You</div>
+      <div
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="w-full md:hidden text-sm text-center text-slate-500 py-3"
+      >
+        Peace Be Upon You
+      </div>
 
       <nav className="hidden md:flex flex-wrap items-center gap-5 text-sm">
         <Link href="/" className="nav-link text-body hover:text-primary">
