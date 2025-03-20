@@ -12,13 +12,13 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme();
   const sidebarRef = useRef(null);
 
-  const handleOutsideClick = (event) => {
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-      setShow(false);
-    }
-  };
-
   useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+        setShow(false);
+      }
+    };
+
     document.addEventListener("mousedown", handleOutsideClick);
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
@@ -50,31 +50,28 @@ export default function Header() {
       </div>
 
       <nav className="hidden md:flex flex-wrap items-center gap-5 text-sm">
-        <Link href="/" className="nav-link text-body hover:text-primary">
+        <Link href="/" className="text-body hover:text-primary">
           HOME
         </Link>
-        <Link href="#resume" className="nav-link text-body hover:text-primary">
+        <Link href="#resume" className="text-body hover:text-primary">
           RESUME
         </Link>
-        <Link href="#skill" className="nav-link text-body hover:text-primary">
+        <Link href="#skill" className="text-body hover:text-primary">
           SKILLS
         </Link>
-        <Link href="#project" className="nav-link text-body hover:text-primary">
+        <Link href="#project" className="text-body hover:text-primary">
           PROJECTS
         </Link>
-        <Link href="#pricing" className="nav-link text-body hover:text-primary">
+        <Link href="#pricing" className="text-body hover:text-primary">
           PRICING
         </Link>
-        <Link
-          href="#testimonial"
-          className="nav-link text-body hover:text-primary"
-        >
+        <Link href="#testimonial" className="text-body hover:text-primary">
           TESTIMONIAL
         </Link>
-        <Link href="#blog" className="nav-link text-body hover:text-primary">
+        <Link href="#blog" className="text-body hover:text-primary">
           BLOG
         </Link>
-        <Link href="#contact" className="nav-link text-body hover:text-primary">
+        <Link href="#contact" className="text-body hover:text-primary">
           CONTACT
         </Link>
       </nav>

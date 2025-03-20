@@ -7,14 +7,16 @@ import Skill from "@/components/skill";
 import Presenter from "@/components/sub/presenter";
 import ContactMe from "@/components/sub/contact";
 import Testimonial from "@/components/testimonial";
+import Achievement from "@/components/achievement";
 
 export default function Home() {
   return (
     <div id="home">
       <Hero />
       <Resume />
-      <Skill />
       <Project />
+      <Skill />
+      {/* <Achievement /> */}
       <Pricing />
       <Testimonial />
       <Blog />

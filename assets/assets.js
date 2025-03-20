@@ -3,17 +3,18 @@ import client0 from "./client0.png";
 import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
 import foodApp from "./food-app.png";
-import landingPage from "./landing.png";
-import workout from "./workout.jpg";
-import { IoServer } from "react-icons/io5";
+import hoobank from "./hooback.png";
+import lifeInsight from "./life-insight.png";
+import wordle from "./wordle.png";
+import { IoServer, IoTime } from "react-icons/io5";
 import { FaReact, FaNodeJs } from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { HiServer } from "react-icons/hi";
-import { PiFileCppBold } from "react-icons/pi";
 import { DiJsBadge } from "react-icons/di";
 import { MdWeb } from "react-icons/md";
 import { TbCodeAsterisk, TbBrandKotlin, TbBrandDjango } from "react-icons/tb";
 import { FaDocker, FaGitAlt, FaInfinity, FaAws } from "react-icons/fa";
+import { BiLogoMicrosoftTeams } from "react-icons/bi";
 import {
   SiPython,
   SiTypescript,
@@ -21,6 +22,10 @@ import {
   SiMongodb,
   SiMysql,
   SiPostgresql,
+  SiGraphql,
+  SiRedux,
+  SiCodeforces,
+  SiCplusplus,
 } from "react-icons/si";
 
 export { headshot };
@@ -33,7 +38,7 @@ export const icons = {
   reactjs: FaReact,
   nextjs: RiNextjsLine,
   coding: TbCodeAsterisk,
-  cpp: PiFileCppBold,
+  cpp: SiCplusplus,
   python: SiPython,
   js: DiJsBadge,
   ts: SiTypescript,
@@ -48,6 +53,11 @@ export const icons = {
   postgresql: SiPostgresql,
   docker: FaDocker,
   aws: FaAws,
+  graphql: SiGraphql,
+  redux: SiRedux,
+  teamwork: BiLogoMicrosoftTeams,
+  time: IoTime,
+  cp: SiCodeforces,
 };
 
 export const reviews = [
@@ -85,35 +95,35 @@ export const reviews = [
 
 export const projects = [
   {
-    bio: "Food Delivery App",
-    title: "Order and Sell Foods",
-    info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
-    image: foodApp,
-    source: "https://github.com/mushfiqbh/food-app",
-    live: "https://food-app.vercel.app",
-  },
-  {
-    bio: "Life Insights Bangla",
+    bio: "NextJs + NodeJs + Mongodb",
     title: "Learning Health, Emotional, Life Lessons",
     info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
-    image: landingPage,
-    source: "https://github.com/mushfiqbh/lifeinsight",
-    live: "https://life-insight.vercel.app",
+    image: lifeInsight,
+    source: "https://github.com/mushfiqbh/life-insight",
+    live: "https://life-insight.netlify.app",
   },
   {
-    bio: "Auto Front Page Generator",
-    title: "Generate Custom PDF Automatic",
-    info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
-    image: workout,
-    source: "https://github.com/mushfiqbh/autocover",
-    live: "https://autocover-sandy.vercel.app",
+    bio: "React Script",
+    title: "Wordle Game, Guess Word",
+    info: "A fun and interactive Wordle game built with React. Players have limited attempts to guess a hidden word using feedback on letter accuracy.",
+    image: wordle,
+    source: "https://github.com/mushfiqbh/wordle-react",
+    live: "https://wordle25.netlify.app",
+  },
+  {
+    bio: "React Js",
+    title: "Banking System Landing Page",
+    info: "A modern and responsive banking system landing page built with React. It features a sleek UI with financial service highlights and engaging design elements.",
+    image: hoobank,
+    source: "https://github.com/mushfiqbh/hoobank",
+    live: "https://hoobank25.netlify.app",
   },
 ];
 
 export const pricings = [
   {
     title: "Frontend",
-    framework: "HTML/ Wordpress",
+    framework: "HTML/CSS/ReactJs/Firebase",
     price: 50,
     info: "Basic website with essential features with potentially a lightweight CMS.",
     features: [
@@ -129,7 +139,7 @@ export const pricings = [
 
   {
     title: "Full Stack",
-    framework: "ReactJs/ NextJs, NodeJs",
+    framework: "ReactJs/NextJs/NodeJs",
     price: 100,
     info: "Functional website with key functionalities (contact forms, e-commerce, blog) includes a server-side language and a database and a framework",
     features: [
@@ -144,7 +154,7 @@ export const pricings = [
   },
   {
     title: "Enterprise Level",
-    framework: "NodeJs, Django/ Flask",
+    framework: "NextJs/NodeJs/Django",
     price: 150,
     info: "Complex, customized website with advanced features (e-commerce, integrations, custom designs) and also may involve more specialized technologies, dedicated project manager",
     features: [

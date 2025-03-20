@@ -8,31 +8,33 @@ export default function Skill() {
     <div id="skill">
       <Headline title="My Skills" subtitle="I eager to show you" />
       <div className="w-full md:w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <Card title="Programming" Icon={icons.coding}>
+        <Card title="Languages" Icon={icons.coding}>
           <Range name="C++" percent={80} Icon={icons.cpp} />
           <Range name="Python" percent={65} Icon={icons.python} />
           <Range name="Javascript" percent={97} Icon={icons.js} />
           <Range name="Typescript" percent={85} Icon={icons.ts} />
         </Card>
-        <Card title="Frontend" Icon={icons.frontend}>
-          <Range name="Next Js" percent={80} Icon={icons.nextjs} />
-          <Range name="React Js" percent={99} Icon={icons.reactjs} />
-          <Range name="Tailwindcss" percent={95} Icon={icons.tailwind} />
+        <Card title="Framework" Icon={icons.frontend}>
+          <Range name="React Js" percent={80} Icon={icons.reactjs} />
+          <Range name="Next Js" percent={99} Icon={icons.nextjs} />
+          <Range name="Node Js" percent={95} Icon={icons.node} />
+          <Range name="Django" percent={95} Icon={icons.django} />
         </Card>
-        <Card title="Backend" Icon={icons.backend}>
-          <Range name="Node Js" percent={80} Icon={icons.node} />
-          <Range name="Django" percent={50} Icon={icons.django} />
+        <Card title="Expertise" Icon={icons.backend}>
+          <Range name="GraphQL" percent={80} Icon={icons.graphql} />
+          <Range name="Redux" percent={50} Icon={icons.redux} />
+          <Range name="MySQL" percent={80} Icon={icons.mysql} />
+          <Range name="PostGreSQL" percent={80} Icon={icons.postgresql} />
         </Card>
-        <Card title="Database" Icon={icons.database}>
-          <Range name="MySQL" percent={90} Icon={icons.mysql} />
-          <Range name="PostgreSQL" percent={80} Icon={icons.postgresql} />
-          <Range name="MongoDB" percent={80} Icon={icons.mongodb} />
-          <Range name="Firebase" percent={80} Icon={icons.firebase} />
-        </Card>
-        <Card title="DevOps" Icon={icons.devops}>
+        <Card title="Tools" Icon={icons.devops}>
           <Range name="Git/Github" percent={90} Icon={icons.git} />
           <Range name="Docker" percent={40} Icon={icons.docker} />
-          <Range name="AWS" percent={40} Icon={icons.aws} />
+          <Range name="Firebase" percent={40} Icon={icons.firebase} />
+        </Card>
+        <Card title="Soft Skill" Icon={icons.database}>
+          <Range name="Teamwork" percent={90} Icon={icons.teamwork} />
+          <Range name="Time Management" percent={80} Icon={icons.time} />
+          <Range name="CP" percent={80} Icon={icons.cp} />
         </Card>
       </div>
     </div>

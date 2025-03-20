@@ -1,5 +1,6 @@
 import Button from "@/UI/Button";
 import Headline from "./sub/headline";
+import Link from "next/link";
 
 export default function Blog() {
   return (
@@ -8,7 +9,7 @@ export default function Blog() {
       <div className="w-full md:w-3/4 mx-auto flex flex-wrap md:flex-nowrap md:gap-5">
         <div className="w-full md:w-1/3 p-10 bg-gradient-box shadow-shadow1">
           <h1 className="text-3xl text-primary">
-            Integrate AI To Your Application
+            0/1 Knapsack Problem Solution
           </h1>
           <h2 className="text-lg">Jan 7, 2025</h2>
           <p>
@@ -18,9 +19,11 @@ export default function Blog() {
             officia, a ab
           </p>
           <br />
-          <Button type="button" text="small" className="">
-            Read More..
-          </Button>
+          <Link href="/">
+            <Button type="button" text="small">
+              Read More..
+            </Button>
+          </Link>
         </div>
         <div className="w-full md:w-1/3 p-10 bg-gradient-box shadow-shadow1">
           <h1 className="text-3xl text-primary">Roadmap To Be A Developer</h1>

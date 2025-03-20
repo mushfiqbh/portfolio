@@ -10,23 +10,20 @@ import { IoMdBrowsers } from "react-icons/io";
 export default function Project() {
   return (
     <div id="project">
-      <Headline
-        title="My Projects"
-        subtitle="Projects I've worked on"
-      />
+      <Headline title="My Projects" subtitle="Projects I've worked on" />
       {projects.map((project, index) => (
         <div
           key={index}
-          className="w-full md:w-3/4 lg:w-3/4 bg-gradient-box mx-auto my-20 md:flex lg:flex items-center rounded-lg shadow-shadow1"
+          className="w-full md:w-3/4 lg:w-3/4 bg-gradient-box mx-auto my-20 md:flex items-stretch rounded-lg shadow-shadow1"
         >
-          <div className="mx-5 lg:mx-0 md:w-2/5 lg:w-2/5 shadow-shadow1">
+          <div className="md:w-2/5 lg:w-2/5 shadow-shadow1">
             <Image
               src={project.image}
               alt="screenshot"
-              className="object-cover rounded-lg lg:rounded-tr-none lg:rounded-br-none"
+              className="w-full h-full object-cover rounded-lg lg:rounded-tr-none lg:rounded-br-none"
             />
           </div>
-          <div className="w-full lg:w-3/5 bg-transparent p-5 md:p-12 rounded-tr-lg rounded-br-lg">
+          <div className="w-full md:w-3/5 lg:w-3/5 bg-transparent p-5 md:p-12 rounded-tr-lg rounded-br-lg">
             <p className="text-primary">{project.bio}</p>
             <h1 className="text-4xl text-heading font-bold py-2">
               {project.title}
@@ -36,7 +33,7 @@ export default function Project() {
             <HLine className="my-5 w-full" />
 
             <div className="flex gap-5">
-              <Link href={project.source}>
+              <Link href={project.source} target="_blank">
                 <Button
                   type="button"
                   variant="rect"
@@ -47,7 +44,7 @@ export default function Project() {
                   Source Code
                 </Button>
               </Link>
-              <Link href={project.live}>
+              <Link href={project.live} target="_blank">
                 <Button
                   type="button"
                   variant="rect"
