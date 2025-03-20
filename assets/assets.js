@@ -2,10 +2,9 @@ import headshot from "./headshot.jpg";
 import client0 from "./client0.png";
 import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
-import foodApp from "./food-app.png";
+import autocover from "./autocover.png";
 import hoobank from "./hooback.png";
 import lifeInsight from "./life-insight.png";
-import wordle from "./wordle.png";
 import { IoServer, IoTime } from "react-icons/io5";
 import { FaReact, FaNodeJs } from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
@@ -100,15 +99,15 @@ export const projects = [
     info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
     image: lifeInsight,
     source: "https://github.com/mushfiqbh/life-insight",
-    live: "https://life-insight.netlify.app",
+    live: "https://life-insight-swart.vercel.app/",
   },
   {
-    bio: "React Script",
-    title: "Wordle Game, Guess Word",
-    info: "A fun and interactive Wordle game built with React. Players have limited attempts to guess a hidden word using feedback on letter accuracy.",
-    image: wordle,
-    source: "https://github.com/mushfiqbh/wordle-react",
-    live: "https://wordle25.netlify.app",
+    bio: "Vite + PDFjs",
+    title: "Auto Front Page Generator",
+    info: "Generate front page for assignment and lab report for leading university students",
+    image: autocover,
+    source: "https://github.com/mushfiqbh/autocover",
+    live: "https://autocover-eight.vercel.app/",
   },
   {
     bio: "React Js",
