@@ -94,7 +94,7 @@ export const reviews = [
 
 export const projects = [
   {
-    bio: "NextJs + NodeJs + Mongodb",
+    bio: "NextJs + NodeJs + Mongodb + Redux + MultiLanguage",
     title: "Learning Health, Emotional, Life Lessons",
     info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
     image: lifeInsight,
