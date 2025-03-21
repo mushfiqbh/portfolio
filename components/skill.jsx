@@ -16,9 +16,9 @@ export default function Skill() {
         </Card>
         <Card title="Framework" Icon={icons.frontend}>
           <Range name="React Js" percent={80} Icon={icons.reactjs} />
-          <Range name="Next Js" percent={99} Icon={icons.nextjs} />
-          <Range name="Node Js" percent={95} Icon={icons.node} />
-          <Range name="Django" percent={95} Icon={icons.django} />
+          <Range name="Next Js" percent={95} Icon={icons.nextjs} />
+          <Range name="Node Js" percent={90} Icon={icons.node} />
+          <Range name="Django" percent={30} Icon={icons.django} />
         </Card>
         <Card title="Expertise" Icon={icons.backend}>
           <Range name="GraphQL" percent={80} Icon={icons.graphql} />
@@ -27,9 +27,9 @@ export default function Skill() {
           <Range name="PostGreSQL" percent={80} Icon={icons.postgresql} />
         </Card>
         <Card title="Tools" Icon={icons.devops}>
-          <Range name="Git/Github" percent={90} Icon={icons.git} />
+          <Range name="GitFlow" percent={90} Icon={icons.git} />
           <Range name="Docker" percent={40} Icon={icons.docker} />
-          <Range name="Firebase" percent={40} Icon={icons.firebase} />
+          <Range name="Firebase" percent={60} Icon={icons.firebase} />
         </Card>
         <Card title="Soft Skill" Icon={icons.database}>
           <Range name="Teamwork" percent={90} Icon={icons.teamwork} />

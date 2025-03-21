@@ -8,7 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Pricing() {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(1);
 
   return (
     <div id="pricing">

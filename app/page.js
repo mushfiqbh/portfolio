@@ -18,8 +18,8 @@ export default function Home() {
       <Skill />
       {/* <Achievement /> */}
       <Pricing />
-      <Testimonial />
-      <Blog />
+      {/* <Testimonial /> */}
+      {/* <Blog /> */}
       <ContactMe />
       <Presenter />
     </div>

@@ -5,7 +5,7 @@ import Button from "@/UI/Button";
 export default function Resume() {
   return (
     <div id="resume">
-      <Headline title="My Resume" subtitle="3+ years of experiences" />
+      <Headline title="My Resume" subtitle="1+ years of experiences" />
       <div className="w-full md:w-3/4 mx-auto md:flex gap-10">
         <div className="w-full md:w-1/2">
           <h2 className="h-20 text-2xl text-primary font-bold flex items-center justify-center bg-gradient-box rounded-lg shadow-shadow1">

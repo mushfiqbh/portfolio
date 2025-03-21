@@ -144,9 +144,8 @@ export const pricings = [
       "Wordpress",
     ],
   },
-
   {
-    title: "Full Stack",
+    title: "Frontend + Backend",
     framework: "ReactJs/NextJs/NodeJs",
     price: 100,
     info: "Functional website with key functionalities (contact forms, e-commerce, blog) includes a server-side language and a database and a framework",
