@@ -16,11 +16,11 @@ export default function Project() {
           key={index}
           className="w-full md:w-3/4 lg:w-3/4 bg-gradient-box mx-auto my-20 md:flex items-stretch rounded-lg shadow-shadow1"
         >
-          <div className="md:w-2/5 lg:w-2/5 shadow-shadow1">
+          <div className="md:w-2/5 lg:w-2/5 shadow-shadow1 overflow-hidden group">
             <Image
               src={project.image}
               alt="screenshot"
-              className="w-full h-full object-cover rounded-lg lg:rounded-tr-none lg:rounded-br-none"
+              className="w-full h-full object-cover rounded-lg lg:rounded-tr-none lg:rounded-br-none transition-transform duration-300 group-hover:scale-110"
             />
           </div>
           <div className="w-full md:w-3/5 lg:w-3/5 bg-transparent p-5 md:p-12 rounded-tr-lg rounded-br-lg">

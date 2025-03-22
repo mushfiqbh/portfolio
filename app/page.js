@@ -11,7 +11,8 @@ import Achievement from "@/components/achievement";
 
 export default function Home() {
   return (
-    <div id="home">
+    <main id="home">
+      <Presenter />
       <Hero />
       <Resume />
       <Project />
@@ -21,7 +22,6 @@ export default function Home() {
       {/* <Testimonial /> */}
       {/* <Blog /> */}
       <ContactMe />
-      <Presenter />
-    </div>
+    </main>
   );
 }

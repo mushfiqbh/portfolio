@@ -14,7 +14,7 @@ export default function Pricing() {
     <div id="pricing">
       <Headline title="Pricing" subtitle="Order to My Agency" />
       <div className="px-0 w-full md:w-3/4 mx-auto flex items-center">
-        {["Static", "Standard", "Premium"].map((label, index) => (
+        {["Regular", "Standard", "Premium"].map((label, index) => (
           <div
             key={index}
             onClick={() => setSelectedIndex(index)}

@@ -2,9 +2,10 @@ import headshot from "./headshot.jpg";
 import client0 from "./client0.png";
 import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
+import handshake from "./handshake.jpg";
 import autocover from "./autocover.png";
 import hoobank from "./hooback.png";
-import wordle from "./wordle.png"
+import wordle from "./wordle.png";
 import lifeInsight from "./life-insight.png";
 import { IoServer, IoTime } from "react-icons/io5";
 import { FaReact, FaNodeJs } from "react-icons/fa6";
@@ -28,7 +29,7 @@ import {
   SiCplusplus,
 } from "react-icons/si";
 
-export { headshot };
+export { headshot, handshake };
 
 export const icons = {
   frontend: MdWeb,

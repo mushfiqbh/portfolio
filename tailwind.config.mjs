@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
 
-export default {
+const config = {
   darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -33,7 +33,18 @@ export default {
         shadow1: "var(--shadow-1)",
         shadow2: "var(--shadow-2)",
       },
+      animation: {
+        fade: "fade 2s infinite ease-in-out",
+      },
+      keyframes: {
+        fade: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
+      },
     },
   },
   plugins: [],
 };
+
+export default config;
