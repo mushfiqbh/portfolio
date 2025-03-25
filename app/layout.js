@@ -1,6 +1,7 @@
 import Header from "@/components/sub/header";
-import Footer from "@/components/sub/footer";
+import Footer from "@/components/footer";
 import { ThemeProvider } from "../context/ThemeContext";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Footer />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>

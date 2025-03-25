@@ -1,6 +1,6 @@
 import CodeforcesRating from "./sub/cf-rating";
 import AboutInfo from "./sub/about";
-import { ContactUs } from "./sub/contact";
+import { ContactUs } from "./contact";
 
 export default function Hero() {
   return (

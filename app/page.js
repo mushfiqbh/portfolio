@@ -5,7 +5,7 @@ import Project from "@/components/project";
 import Resume from "@/components/resume";
 import Skill from "@/components/skill";
 import Presenter from "@/components/sub/presenter";
-import ContactMe from "@/components/sub/contact";
+import ContactMe from "@/components/contact";
 import Testimonial from "@/components/testimonial";
 import Achievement from "@/components/achievement";
 

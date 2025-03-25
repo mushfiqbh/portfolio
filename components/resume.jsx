@@ -67,11 +67,11 @@ export default function Resume() {
                 <h1 className="text-2xl font-bold md:text-3xl mb-2">
                   Full Time Professional Freelancer
                 </h1>
-                <h3>Upwork & Fiverr (2022 - Present)</h3>
+                <h3>Fiverr (2022 - Present)</h3>
               </div>
               <div>
                 <Button text="small" className="text-primary">
-                  4.9*
+                  5.0*
                 </Button>
               </div>
             </div>

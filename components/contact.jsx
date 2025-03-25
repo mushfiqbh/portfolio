@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Headline from "./headline";
+import Headline from "./sub/headline";
 import Button from "@/UI/Button";
 import Image from "next/image";
 import { handshake } from "@/assets/assets";
@@ -21,7 +21,7 @@ export default function ContactMe() {
       })
       .then(
         () => {
-          setStatus("Sent! Thank you");
+          setStatus("Sent! Resend");
           form.current.reset();
         },
         (error) => {
@@ -36,7 +36,11 @@ export default function ContactMe() {
       <Headline title="Contact Me" subtitle="Send Direct Email" />
       <div className="w-full md:w-3/4 mx-auto md:flex items-center justify-between gap-20">
         <div className="md:w-1/2 rounded-xl">
-          <Image src={handshake} alt="handshake" className="opacity-50 rounded-t-2xl md:rounded-2xl animate-fade" />
+          <Image
+            src={handshake}
+            alt="handshake"
+            className="opacity-50 rounded-t-2xl md:rounded-2xl animate-fade"
+          />
         </div>
         <form
           ref={form}

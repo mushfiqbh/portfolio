@@ -14,8 +14,10 @@ import { HiServer } from "react-icons/hi";
 import { DiJsBadge } from "react-icons/di";
 import { MdWeb } from "react-icons/md";
 import { TbCodeAsterisk, TbBrandKotlin, TbBrandDjango } from "react-icons/tb";
-import { FaDocker, FaGitAlt, FaInfinity, FaAws } from "react-icons/fa";
+import { FaDocker, FaGitAlt, FaInfinity, FaAws, FaTools } from "react-icons/fa";
 import { BiLogoMicrosoftTeams } from "react-icons/bi";
+import { GiSkills } from "react-icons/gi";
+import { FcMindMap } from "react-icons/fc";
 import {
   SiPython,
   SiTypescript,
@@ -27,6 +29,7 @@ import {
   SiRedux,
   SiCodeforces,
   SiCplusplus,
+  SiFramework7,
 } from "react-icons/si";
 
 export { headshot, handshake };
@@ -59,6 +62,10 @@ export const icons = {
   teamwork: BiLogoMicrosoftTeams,
   time: IoTime,
   cp: SiCodeforces,
+  tools: FaTools,
+  skill: GiSkills,
+  mindmap: FcMindMap,
+  framework: SiFramework7,
 };
 
 export const reviews = [
@@ -163,7 +170,7 @@ export const pricings = [
   {
     title: "Enterprise Level",
     framework: "NextJs/NodeJs/Django",
-    price: 150,
+    price: 200,
     info: "Complex, customized website with advanced features (e-commerce, integrations, custom designs) and also may involve more specialized technologies, dedicated project manager",
     features: [
       "Custom Product Pages",
