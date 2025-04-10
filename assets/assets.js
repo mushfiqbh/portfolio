@@ -4,9 +4,12 @@ import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
 import handshake from "./handshake.jpg";
 import autocover from "./autocover.png";
-import hoobank from "./hooback.png";
 import wordle from "./wordle.png";
+import cherrypick from "./cherrypick.png";
 import lifeInsight from "./life-insight.png";
+import cert_reactjs from "./react_frontend.png";
+import cert_js from "./js_intermidiate.png";
+import cert_prob from "./problem_solving_basic.png";
 import { IoServer, IoTime } from "react-icons/io5";
 import { FaReact, FaNodeJs } from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
@@ -68,6 +71,39 @@ export const icons = {
   framework: SiFramework7,
 };
 
+export const contributions = [
+  {
+    repo: "mui/material-ui",
+    description:
+      "Fix a bug and write unit testing documentation",
+    link: "https://github.com/mui/material-ui/pull/45345",
+  },
+  {
+    repo: "ReactChat",
+    description:
+      "Contributed bug fixes and improved Responsiveness for mobile and tablet",
+    link: "https://github.com/urstrulynishkarsh/ReactChat/pull/223",
+  },
+];
+
+export const certificates = [
+  {
+    title: "Frontend Developer (React)",
+    url: "https://www.hackerrank.com/certificates/1e260e7d33ff",
+    image: cert_reactjs,
+  },
+  {
+    title: "JavaScript (Intermediate)",
+    url: "https://www.hackerrank.com/certificates/ba6a1c07663f",
+    image: cert_js,
+  },
+  {
+    title: "Problem Solving (Basic)",
+    url: "https://www.hackerrank.com/certificates/bcc6e07a913c",
+    image: cert_prob,
+  },
+];
+
 export const reviews = [
   {
     id: 0,
@@ -103,14 +139,6 @@ export const reviews = [
 
 export const projects = [
   {
-    bio: "ReactJs",
-    title: "Wordle Game, Guess Word",
-    info: "A fun and interactive Wordle game built with React. Players have limited attempts to guess a hidden word using feedback on letter accuracy.",
-    image: wordle,
-    source: "https://github.com/mushfiqbh/wordle-react",
-    live: "https://wordle25.netlify.app/",
-  },
-  {
     bio: "NextJs + NodeJs + Mongodb + Redux + MultiLanguage",
     title: "Learning Health, Emotional, Life Lessons",
     info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
@@ -119,20 +147,28 @@ export const projects = [
     live: "https://life-insight-swart.vercel.app/",
   },
   {
-    bio: "Vite + PDFjs",
+    bio: "NextJs + Typescript + Firebase",
+    title: "Reseller E-Commerce Platform",
+    info: "A modern and responsive Multi-vendor online shop with NextJs. It features a sleek UI with role-based user authentication and maintaining order, delivery, payment flawlessly.",
+    image: cherrypick,
+    source: "https://github.com/mushfiqbh/cherrypick",
+    live: "https://cherrypickshop.vercel.app",
+  },
+  {
+    bio: "ReactJs + SASS",
+    title: "Wordle Game, Guess Word",
+    info: "A fun and interactive Wordle game built with React. Players have limited attempts to guess a hidden word using feedback on letter accuracy.",
+    image: wordle,
+    source: "https://github.com/mushfiqbh/wordle-react",
+    live: "https://wordle25.netlify.app/",
+  },
+  {
+    bio: "ReactJs + Vite + PDFjs",
     title: "Auto Front Page Generator",
     info: "Generate front page for assignment and lab report for leading university students",
     image: autocover,
     source: "https://github.com/mushfiqbh/autocover",
     live: "https://autocover-eight.vercel.app/",
-  },
-  {
-    bio: "React Js",
-    title: "Banking System Landing Page",
-    info: "A modern and responsive banking system landing page built with React. It features a sleek UI with financial service highlights and engaging design elements.",
-    image: hoobank,
-    source: "https://github.com/mushfiqbh/hoobank",
-    live: "https://hoobank25.netlify.app",
   },
 ];
 
@@ -140,7 +176,7 @@ export const pricings = [
   {
     title: "Frontend",
     framework: "HTML/CSS/ReactJs/Firebase",
-    price: 50,
+    price: 100,
     info: "Basic website with essential features with potentially a lightweight CMS.",
     features: [
       "Simple Portfolio",
@@ -155,7 +191,7 @@ export const pricings = [
   {
     title: "Frontend + Backend",
     framework: "ReactJs/NextJs/NodeJs",
-    price: 100,
+    price: 200,
     info: "Functional website with key functionalities (contact forms, e-commerce, blog) includes a server-side language and a database and a framework",
     features: [
       "Custom Design",
@@ -170,7 +206,7 @@ export const pricings = [
   {
     title: "Enterprise Level",
     framework: "NextJs/NodeJs/Django",
-    price: 200,
+    price: 500,
     info: "Complex, customized website with advanced features (e-commerce, integrations, custom designs) and also may involve more specialized technologies, dedicated project manager",
     features: [
       "Custom Product Pages",

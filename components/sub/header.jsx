@@ -56,20 +56,20 @@ export default function Header() {
         <Link href="#resume" className="text-body hover:text-primary">
           RESUME
         </Link>
-        <Link href="#skill" className="text-body hover:text-primary">
-          SKILLS
-        </Link>
         <Link href="#project" className="text-body hover:text-primary">
           PROJECTS
         </Link>
+        <Link href="#contribution" className="text-body hover:text-primary">
+          CONTRIBUTIONS
+        </Link>
+        <Link href="#skill" className="text-body hover:text-primary">
+          SKILLS
+        </Link>
+        <Link href="#achievement" className="text-body hover:text-primary">
+          ACHIEVEMENTS
+        </Link>
         <Link href="#pricing" className="text-body hover:text-primary">
           PRICING
-        </Link>
-        <Link href="#testimonial" className="text-body hover:text-primary">
-          TESTIMONIAL
-        </Link>
-        <Link href="#blog" className="text-body hover:text-primary">
-          BLOG
         </Link>
         <Link href="#contact" className="text-body hover:text-primary">
           CONTACT

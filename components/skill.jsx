@@ -18,7 +18,6 @@ export default function Skill() {
           <Range name="React Js" percent={80} Icon={icons.reactjs} />
           <Range name="Next Js" percent={95} Icon={icons.nextjs} />
           <Range name="Node Js" percent={90} Icon={icons.node} />
-          <Range name="Django" percent={30} Icon={icons.django} />
         </Card>
         <Card title="Expertise" Icon={icons.skill}>
           <Range name="GraphQL" percent={80} Icon={icons.graphql} />

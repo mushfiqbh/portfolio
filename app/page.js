@@ -8,6 +8,7 @@ import Presenter from "@/components/sub/presenter";
 import ContactMe from "@/components/contact";
 import Testimonial from "@/components/testimonial";
 import Achievement from "@/components/achievement";
+import Contribution from "@/components/contribution";
 
 export default function Home() {
   return (
@@ -16,10 +17,11 @@ export default function Home() {
       <Hero />
       <Resume />
       <Project />
+      <Contribution />
       <Skill />
-      {/* <Achievement /> */}
-      <Pricing />
+      <Achievement />
       {/* <Testimonial /> */}
+      <Pricing />
       {/* <Blog /> */}
       <ContactMe />
     </main>
