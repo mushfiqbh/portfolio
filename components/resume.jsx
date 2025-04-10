@@ -65,7 +65,7 @@ export default function Resume() {
             <div className="w-full flex justify-between">
               <div>
                 <h1 className="text-2xl font-bold md:text-3xl mb-2">
-                  Full Time Professional Freelancer
+                  Professional WebDev Freelancer
                 </h1>
                 <h3>Fiverr (2022 - Present)</h3>
               </div>

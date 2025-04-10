@@ -17,8 +17,8 @@ export default function Home() {
       <Hero />
       <Resume />
       <Project />
-      <Contribution />
       <Skill />
+      <Contribution />
       <Achievement />
       {/* <Testimonial /> */}
       <Pricing />

@@ -59,11 +59,11 @@ export default function Header() {
         <Link href="#project" className="text-body hover:text-primary">
           PROJECTS
         </Link>
-        <Link href="#contribution" className="text-body hover:text-primary">
-          CONTRIBUTIONS
-        </Link>
         <Link href="#skill" className="text-body hover:text-primary">
           SKILLS
+        </Link>
+        <Link href="#contribution" className="text-body hover:text-primary">
+          CONTRIBUTIONS
         </Link>
         <Link href="#achievement" className="text-body hover:text-primary">
           ACHIEVEMENTS
