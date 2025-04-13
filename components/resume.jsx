@@ -29,8 +29,7 @@ export default function Resume() {
             <HLine className="w-full my-5 md:my-7" />
             <div>
               I have been learning Data Structures and Algorithm, System design,
-              competitive programming etc. Also Perticipating programming
-              contests including icpc.
+              competitive programming etc.
             </div>
           </div>
 

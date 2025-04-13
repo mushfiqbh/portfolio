@@ -16,7 +16,7 @@
   --shadow-1: 10px 10px 19px #d1d9e6, -10px -10px 19px #ffffff;
   --shadow-2: inset 21px 21px 19px #d1d9e6, inset -21px -21px 19px #f5f6fa;
   --gradient-box: linear-gradient(145deg, #e2e8ec, #ffffff);
-  --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
+  --gradient-red-hover: linear-gradient(135deg, rgb(0, 200, 200), rgb(0, 160, 160));
 
   /* Fonts */
   --font-primary: "Poppins", sans-serif;
@@ -34,7 +34,7 @@
   --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
   --gradient-box: linear-gradient(145deg, #1e2024, #23272b);
-  --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
+  --gradient-red-hover: linear-gradient(135deg, rgb(0, 200, 200), rgb(0, 160, 160));
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
