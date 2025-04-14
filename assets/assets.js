@@ -10,6 +10,7 @@ import lifeInsight from "./life-insight.png";
 import cert_reactjs from "./react_frontend.png";
 import cert_js from "./js_intermidiate.png";
 import cert_prob from "./problem_solving_basic.png";
+import cert_sql from "./cert_sql.png";
 import { IoServer, IoTime } from "react-icons/io5";
 import { FaReact, FaNodeJs } from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
@@ -96,6 +97,11 @@ export const certificates = [
     title: "JavaScript (Intermediate)",
     url: "https://www.hackerrank.com/certificates/ba6a1c07663f",
     image: cert_js,
+  },
+  {
+    title: "SQL (Advanced)",
+    url: "https://www.hackerrank.com/certificates/d0890475619e",
+    image: cert_sql,
   },
   {
     title: "Problem Solving (Basic)",
