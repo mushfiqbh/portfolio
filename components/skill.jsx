@@ -1,6 +1,6 @@
-import Range from "@/UI/range";
+import Range from "./ui/range";
 import Headline from "./sub/headline";
-import Card from "@/UI/card";
+import Card from "./ui/card";
 import { icons } from "@/assets/assets";
 
 export default function Skill() {

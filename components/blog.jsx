@@ -1,4 +1,4 @@
-import Button from "@/UI/Button";
+import Button from "./ui/Button";
 import Headline from "./sub/headline";
 import Link from "next/link";
 

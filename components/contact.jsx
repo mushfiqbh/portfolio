@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Headline from "./sub/headline";
-import Button from "@/UI/Button";
+import Button from "./ui/Button";
 import Image from "next/image";
 import { handshake } from "@/assets/assets";
 

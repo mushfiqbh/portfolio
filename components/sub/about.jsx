@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Button from "@/UI/Button";
-import Typewriter from "@/UI/typewritter";
+import Button from "../ui/Button";
+import Typewriter from "../ui/typewritter";
 import { PiReadCvLogoFill } from "react-icons/pi";
 import {
   FaLinkedinIn,
@@ -34,45 +34,88 @@ export default function AboutInfo() {
 
       <br />
       <div className="flex flex-wrap items-center gap-5">
-        <Link
+        <Button
+          type="link"
           href="https://drive.google.com/file/d/1sbuJNF8WrMMxwckzF9y19S-QH_AiJefR/view?usp=sharing"
           target="_blank"
+          variant="rect"
+          text="large"
         >
-          <Button type="button" variant="rect" text="small">
-            <PiReadCvLogoFill />
-            CV
-          </Button>
-        </Link>
-        <Link href="https://www.linkedin.com/in/mushfiqbh/" target="_blank">
-          <Button type="button" variant="rect" text="large">
-            <FaLinkedinIn />
-          </Button>
-        </Link>
-        <Link href="https://wa.me/8801737542444" target="_blank">
-          <Button type="button" variant="rect" text="large">
-            <FaWhatsapp />
-          </Button>
-        </Link>
-        <Link href="mailto:mushfiqbh@gmail.com" target="">
-          <Button type="button" variant="rect" className="text-xl">
-            <MdEmail />
-          </Button>
-        </Link>
-        <Link href="https://www.x.com/mushfiqbh" target="_blank">
-          <Button type="button" variant="rect" className="text-xl">
-            <FaXTwitter />
-          </Button>
-        </Link>
-        <Link href="https://www.facebook.com/mushfiqbh" target="_blank">
-          <Button type="button" variant="rect" className="text-xl">
-            <FaFacebookF />
-          </Button>
-        </Link>
-        <Link href="https://www.github.com/mushfiqbh" target="_blank">
-          <Button type="button" variant="rect" className="text-xl">
-            <FaGithub />
-          </Button>
-        </Link>
+          <PiReadCvLogoFill />
+          <p className="text-sm">CV</p>
+        </Button>
+
+        <Button
+          type="link"
+          href="https://www.linkedin.com/in/mushfiqbh/"
+          target="_blank"
+          variant="rect"
+          text="large"
+          className="group"
+        >
+          <FaLinkedinIn />
+          <p className="text-sm hidden group-hover:inline">LinkedIn</p>
+        </Button>
+
+        <Button
+          type="link"
+          href="https://wa.me/8801737542444"
+          target="_blank"
+          variant="rect"
+          text="large"
+          className="group"
+        >
+          <FaWhatsapp />
+          <p className="text-sm hidden group-hover:inline">Whatsapp</p>
+        </Button>
+
+        <Button
+          type="link"
+          href="mailto:mushfiqbh@gmail.com"
+          target=""
+          variant="rect"
+          text="large"
+          className="group"
+        >
+          <MdEmail />
+          <p className="text-sm hidden group-hover:inline">Email</p>
+        </Button>
+
+        <Button
+          type="link"
+          href="https://www.x.com/mushfiqbh"
+          target="_blank"
+          variant="rect"
+          text="large"
+          className="group"
+        >
+          <FaXTwitter />
+          <p className="text-sm hidden group-hover:inline">Twitter</p>
+        </Button>
+
+        <Button
+          type="link"
+          href="https://www.facebook.com/mushfiqbh"
+          target="_blank"
+          variant="rect"
+          text="large"
+          className="group"
+        >
+          <FaFacebookF />
+          <p className="text-sm hidden group-hover:inline">Facebook</p>
+        </Button>
+
+        <Button
+          type="link"
+          href="https://www.github.com/mushfiqbh"
+          target="_blank"
+          variant="rect"
+          text="large"
+          className="group"
+        >
+          <FaGithub />
+          <p className="text-sm hidden group-hover:inline">Github</p>
+        </Button>
       </div>
     </div>
   );

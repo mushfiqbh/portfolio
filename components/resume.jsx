@@ -1,6 +1,6 @@
-import HLine from "@/UI/hline";
+import HLine from "./ui/hline";
 import Headline from "./sub/headline";
-import Button from "@/UI/Button";
+import Button from "./ui/Button";
 
 export default function Resume() {
   return (

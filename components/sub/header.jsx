@@ -3,7 +3,7 @@
 import { MdMenu, MdLightMode, MdDarkMode } from "react-icons/md";
 import { useRef, useState, useEffect } from "react";
 import { useTheme } from "@/context/ThemeContext";
-import Button from "@/UI/Button";
+import Button from "../ui/Button";
 import Link from "next/link";
 import Sidebar from "./sidebar";
 

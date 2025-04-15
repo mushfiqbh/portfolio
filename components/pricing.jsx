@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Button from "@/UI/Button";
+import Button from "./ui/Button";
 import Headline from "./sub/headline";
 import { pricings } from "@/assets/assets";
 import { FaLinkedin } from "react-icons/fa";
@@ -35,7 +35,12 @@ export default function Pricing() {
               </h1>
               <p>{pricings[selectedIndex].framework}</p>
             </div>
-            <Button type="button" variant="rect" text="small" className="cursor-default">
+            <Button
+              type="button"
+              variant="rect"
+              text="small"
+              className="cursor-default"
+            >
               Starting ${pricings[selectedIndex].price}.0
             </Button>
           </div>
@@ -52,10 +57,9 @@ export default function Pricing() {
               ))}
             </ul>
           </div>
-          <Link href="https://www.linkedin.com/in/mushfiqbh/" target="_blank">
+          <Link href="#home">
             <div className="w-full text-xl flex items-center justify-center gap-5 text-white p-5 rounded-lg bg-gradient-red hover:shadow-shadow1">
-              <FaLinkedin />
-              ORDER NOW
+              Contact To Order
             </div>
           </Link>
         </div>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { reviews } from "@/assets/assets";
 import Headline from "./sub/headline";
-import Button from "@/UI/Button";
+import Button from "./ui/Button";
 import { useState } from "react";
 import { GrNext, GrPrevious } from "react-icons/gr";
 

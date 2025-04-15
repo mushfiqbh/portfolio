@@ -1,9 +1,9 @@
 import Headline from "./sub/headline";
 import Image from "next/image";
 import { projects } from "@/assets/assets";
-import Button from "@/UI/Button";
+import Button from "./ui/Button";
 import Link from "next/link";
-import HLine from "@/UI/hline";
+import HLine from "./ui/hline";
 import { FaCode } from "react-icons/fa";
 import { IoMdBrowsers } from "react-icons/io";
 
