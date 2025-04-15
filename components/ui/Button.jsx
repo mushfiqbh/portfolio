@@ -1,6 +1,10 @@
+import Link from "next/link";
+
 export default function Button({
   children,
   type = "none",
+  href = "",
+  target = "",
   onClick,
   text = "normal",
   className = "",
@@ -43,9 +47,19 @@ export default function Button({
 
   const combinedStyles = `${baseStyles[variant]} ${commonStyles} ${hoverStyles} ${className}`;
 
-  return (
-    <button type={type} onClick={onClick} className={combinedStyles}>
-      {children}
-    </button>
-  );
+  if (type === "link") {
+    return (
+      <Link href={href} target={target}>
+        <button type={type} onClick={onClick} className={combinedStyles}>
+          {children}
+        </button>
+      </Link>
+    );
+  } else {
+    return (
+      <button type={type} onClick={onClick} className={combinedStyles}>
+        {children}
+      </button>
+    );
+  }
 }
