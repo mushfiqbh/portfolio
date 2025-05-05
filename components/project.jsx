@@ -10,7 +10,7 @@ import { IoMdBrowsers } from "react-icons/io";
 export default function Project() {
   return (
     <div id="project">
-      <Headline title="My Projects" subtitle="Projects I've worked on" />
+      <Headline title="My Unique Projects" subtitle="Real world projects" />
       {projects.map((project, index) => (
         <div
           key={index}

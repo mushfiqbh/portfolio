@@ -7,7 +7,7 @@ import { pricings } from "@/assets/assets";
 import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
-export default function Pricing() {
+export default function Services() {
   const [selectedIndex, setSelectedIndex] = useState(1);
 
   return (

@@ -61,7 +61,7 @@ export default function ContactMe() {
             name="user_email"
             id="user_email"
             className="mt-1 block w-full px-3 py-2 bg-background border rounded-lg border-none outline-none"
-            placeholder="Enter your email/ phone"
+            placeholder="Enter your Contact info"
             required
           />
 

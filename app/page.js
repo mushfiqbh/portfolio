@@ -1,14 +1,11 @@
-import Blog from "@/components/blog";
 import Hero from "@/components/hero";
-import Pricing from "@/components/pricing";
 import Project from "@/components/project";
 import Resume from "@/components/resume";
 import Skill from "@/components/skill";
 import Presenter from "@/components/sub/presenter";
-import ContactMe from "@/components/contact";
-import Testimonial from "@/components/testimonial";
 import Achievement from "@/components/achievement";
 import Contribution from "@/components/contribution";
+import Services from "@/components/services";
 
 export default function Home() {
   return (
@@ -20,10 +17,7 @@ export default function Home() {
       <Skill />
       <Contribution />
       <Achievement />
-      {/* <Testimonial /> */}
-      <Pricing />
-      {/* <Blog /> */}
-      <ContactMe />
+      <Services />
     </main>
   );
 }
