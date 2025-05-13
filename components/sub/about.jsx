@@ -1,8 +1,10 @@
-import Link from "next/link";
+"use client";
+
 import Button from "../ui/Button";
 import Typewriter from "../ui/typewritter";
 import { PiReadCvLogoFill } from "react-icons/pi";
 import {
+  FaCopy,
   FaLinkedinIn,
   FaFacebookF,
   FaWhatsapp,
@@ -13,6 +15,10 @@ import { MdEmail } from "react-icons/md";
 import { CiLocationOn, CiMail } from "react-icons/ci";
 
 export default function AboutInfo() {
+  const handleCopy = () => {
+    navigator.clipboard.writeText("mushfiqbh@gmail.com");
+  };
+
   return (
     <div className="w-full xl:w-1/2 p-7 xl:p-20 bg-background text-body">
       <h1 className="text-4xl xl:text-6xl font-bold">
@@ -20,8 +26,8 @@ export default function AboutInfo() {
       </h1>
       <Typewriter />
       <p className="my-2">
-        Currently Studying in Computer Science and Engineering at Leading
-        University.
+        Currently Pursuing B.Sc. in Computer Science and Engineering at Leading
+        University (3rd Year).
       </p>
       <div className="flex items-center">
         <CiLocationOn className="text-xl text-primary" />
@@ -30,6 +36,7 @@ export default function AboutInfo() {
       <div className="flex items-center">
         <CiMail className="text-xl text-primary" />
         <p>&nbsp;mushfiqbh@gmail.com</p>
+        <FaCopy onClick={handleCopy} className="hover:text-primary mx-2 cursor-pointer" />
       </div>
 
       <br />

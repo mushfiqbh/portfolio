@@ -47,37 +47,37 @@ export default function Footer() {
         </div>
         <div className="w-full md:w-1/5 pb-5 flex flex-wrap md:flex-col gap-3 justify-center md:justify-start">
           <h2 className="w-full text-xl text-primary">RESOURCES</h2>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             Authentication
           </Link>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             System Status
           </Link>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             Terms of Service
           </Link>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             Pricing
           </Link>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             Over Right
           </Link>
         </div>
         <div className="w-full md:w-1/5 flex flex-wrap md:flex-col gap-3 justify-center md:justify-start">
           <h2 className="w-full text-xl text-primary">DEVELOPERS</h2>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             Documentation
           </Link>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             Authentication
           </Link>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             API Reference
           </Link>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             Support
           </Link>
-          <Link href="" className="hover:underline" target="_blank">
+          <Link href="" className="hover:underline">
             Open Source
           </Link>
         </div>

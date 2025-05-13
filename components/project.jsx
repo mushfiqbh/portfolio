@@ -8,9 +8,18 @@ import { FaCode } from "react-icons/fa";
 import { IoMdBrowsers } from "react-icons/io";
 
 export default function Project() {
+  const colors = [
+    "bg-teal-100",
+    "bg-green-100",
+    "bg-yellow-100",
+    "bg-purple-100",
+    "bg-orange-100",
+    "bg-rose-100",
+  ];
+
   return (
     <div id="project">
-      <Headline title="My Unique Projects" subtitle="Real world projects" />
+      <Headline title="My Projects" subtitle="Real world unique projects" />
       {projects.map((project, index) => (
         <div
           key={index}
@@ -24,7 +33,19 @@ export default function Project() {
             />
           </div>
           <div className="w-full md:w-3/5 lg:w-3/5 bg-transparent p-5 md:p-12 rounded-tr-lg rounded-br-lg">
-            <p className="text-primary">{project.bio}</p>
+            <div className="flex items-center gap-3 flex-wrap">
+              {project.bio.split(" + ").map((item, index) => (
+                <p
+                  key={index}
+                  className={`text-sm text-slate-500 rounded-2xl p-1 ${
+                    colors[index % colors.length]
+                  }`}
+                >
+                  {item}
+                </p>
+              ))}
+            </div>
+
             <h1 className="text-4xl text-heading font-bold py-2">
               {project.title}
             </h1>
