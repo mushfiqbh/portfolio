@@ -105,7 +105,7 @@ export default function RatingsChart() {
             </Link>
           </p>
 
-          <Paper elevation={3} sx={{ pt: 2, pb: 1, pr: 2, pl: 1 }}>
+          <Paper elevation={3} sx={{ pt: 2, pb: 1, pr: 1, pl: 0 }}>
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={ratingsData}>
                 <CartesianGrid strokeDasharray="3 3" />
