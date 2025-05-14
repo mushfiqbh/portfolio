@@ -1,4 +1,4 @@
-import CodeforcesRating from "./sub/cf-rating";
+import CPRating from "./sub/cp-rating";
 import AboutInfo from "./sub/about";
 import { ContactUs } from "./contact";
 
@@ -8,7 +8,7 @@ export default function Hero() {
       <div id="hero" className="w-full block lg:flex pt-24">
         <AboutInfo />
         <div className="w-full lg:w-1/2 p-5 lg:p-20">
-          <CodeforcesRating />
+          <CPRating />
         </div>
       </div>
       <div className="w-[90%] border-t-2 border-slate-200 dark:border-slate-800 mx-auto"></div>
