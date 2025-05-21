@@ -3,7 +3,7 @@ import Image from "next/image";
 import { projects } from "@/assets/assets";
 import Button from "./ui/Button";
 import Link from "next/link";
-import HLine from "./ui/hline";
+import HLine from "./ui/separator";
 import { FaCode } from "react-icons/fa";
 import { IoMdBrowsers } from "react-icons/io";
 
@@ -80,6 +80,16 @@ export default function Project() {
           </div>
         </div>
       ))}
+
+      <Button
+        type="link"
+        href="/projects"
+        variant="rect"
+        text="small"
+        className="w-fit mx-auto text-primary"
+      >
+        Explore All Projects *
+      </Button>
     </div>
   );
 }

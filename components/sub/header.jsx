@@ -44,34 +44,34 @@ export default function Header() {
 
       <div
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="w-full md:hidden text-sm text-center text-slate-500 py-3"
+        className="w-full md:hidden text-2xl text-center text-slate-500 py-3"
       >
-        Peace Be Upon You
+        .... . .-.. .-.. ---
       </div>
 
       <nav className="hidden md:flex flex-wrap items-center gap-5 text-sm">
         <Link href="/" className="text-body hover:text-primary">
           HOME
         </Link>
-        <Link href="#resume" className="text-body hover:text-primary">
+        <Link href="/#resume" className="text-body hover:text-primary">
           RESUME
         </Link>
-        <Link href="#project" className="text-body hover:text-primary">
+        <Link href="/#project" className="text-body hover:text-primary">
           PROJECTS
         </Link>
-        <Link href="#skill" className="text-body hover:text-primary">
+        <Link href="/#skill" className="text-body hover:text-primary">
           SKILLS
         </Link>
-        <Link href="#contribution" className="text-body hover:text-primary">
+        <Link href="/#contribution" className="text-body hover:text-primary">
           CONTRIBUTIONS
         </Link>
-        <Link href="#achievement" className="text-body hover:text-primary">
+        <Link href="/#achievement" className="text-body hover:text-primary">
           ACHIEVEMENTS
         </Link>
-        <Link href="#pricing" className="text-body hover:text-primary">
-          PRICING
+        <Link href="/#services" className="text-body hover:text-primary">
+          SERVICES
         </Link>
-        <Link href="#contact" className="text-body hover:text-primary">
+        <Link href="/" className="text-body hover:text-primary">
           CONTACT
         </Link>
       </nav>

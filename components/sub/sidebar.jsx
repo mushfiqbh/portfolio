@@ -53,15 +53,12 @@ export default function Sidebar({ sidebarRef, show, setShow }) {
             ACHIEVEMENTS
           </Link>
           <Link
-            href="#pricing"
+            href="#services"
             className="nav-link text-body hover:text-primary"
           >
-            PRICING
+            SERVICES
           </Link>
-          <Link
-            href="#contact"
-            className="nav-link text-body hover:text-primary"
-          >
+          <Link href="/" className="nav-link text-body hover:text-primary">
             CONTACT
           </Link>
         </nav>
