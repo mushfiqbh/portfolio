@@ -17,7 +17,12 @@ export default function Presenter() {
         >
           <IoCloseCircle className="text-2xl md:text-3xl text-primary bg-white rounded-full translate-x-20 md:translate-x-28 translate-y-5" />
         </div>
-        <Image src={headshot} alt="presenting" className="w-24 md:w-32 rounded-lg" />
+        <Image
+          priority
+          src={headshot}
+          alt="presenting"
+          className="w-24 md:w-32 rounded-lg"
+        />
       </div>
     )
   );
