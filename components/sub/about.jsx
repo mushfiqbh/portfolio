@@ -43,7 +43,7 @@ export default function AboutInfo() {
       <div className="flex flex-wrap items-center gap-5">
         <Button
           type="link"
-          href="https://drive.google.com/file/d/1sbuJNF8WrMMxwckzF9y19S-QH_AiJefR/view?usp=sharing"
+          href="https://drive.google.com/file/d/19mlQ41JHHfii9qKAFnJgwvW_NW8T3PVh/view?usp=sharing"
           target="_blank"
           variant="rect"
           text="large"

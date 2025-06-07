@@ -57,22 +57,27 @@ export default function RatingsChart() {
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
-      const [cf, cc] = await Promise.all([
-        fetchCodeforcesData(),
-        fetchCodechefData(),
-      ]);
+      try {
+        setLoading(true);
+        const [cf, cc] = await Promise.all([
+          fetchCodeforcesData(),
+          fetchCodechefData(),
+        ]);
 
-      // Merge both datasets with contest labels
-      const maxLength = Math.max(cf.length, cc.length);
-      const merged = Array.from({ length: maxLength }).map((_, i) => ({
-        name: cf[i]?.name || cc[i]?.name || `#${i + 1}`,
-        codeforces: cf[i]?.codeforces ?? null,
-        codechef: cc[i]?.codechef ?? null,
-      }));
+        // Merge both datasets with contest labels
+        const maxLength = Math.max(cf.length, cc.length);
+        const merged = Array.from({ length: maxLength }).map((_, i) => ({
+          name: cf[i]?.name || cc[i]?.name || `#${i + 1}`,
+          codeforces: cf[i]?.codeforces ?? null,
+          codechef: cc[i]?.codechef ?? null,
+        }));
 
-      setRatingsData(merged);
-      setLoading(false);
+        setRatingsData(merged);
+      } catch {
+        throw new Error("Cannot Connect");
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchData();

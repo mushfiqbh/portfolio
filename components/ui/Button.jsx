@@ -19,7 +19,7 @@ export default function Button({
     ${text === "small" && "text-sm"} 
     ${text === "large" && "text-xl"} 
     ${text === "normal" && "text-lg"} 
-    text-body 
+    text-primary
     bg-gradient-box 
     shadow-shadow1 
     focus:outline-none 

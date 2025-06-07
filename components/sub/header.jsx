@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <div
       id="header"
-      className="w-full min-h-20 z-10 flex justify-between items-center px-7 md:px-20 py-5 fixed shadow-md bg-transparent backdrop-blur-md"
+      className="w-full min-h-20 z-20 flex justify-between items-center px-7 md:px-20 py-5 fixed shadow-md bg-transparent backdrop-blur-md"
     >
       <div>
         <Button

@@ -1,95 +1,64 @@
-import Headline from "./sub/headline";
-import Image from "next/image";
-import { projects } from "@/assets/assets";
-import Button from "./ui/Button";
-import Link from "next/link";
-import HLine from "./ui/separator";
-import { FaCode } from "react-icons/fa";
-import { IoMdBrowsers } from "react-icons/io";
+"use client";
 
-export default function Project() {
-  const colors = [
-    "bg-teal-100",
-    "bg-green-100",
-    "bg-yellow-100",
-    "bg-purple-100",
-    "bg-orange-100",
-    "bg-rose-100",
-  ];
+import React, { useRef, useState, useEffect } from "react";
+import { projects } from "@/assets/assets";
+import Image from "next/image";
+import Headline from "./sub/headline";
+import ProjectModal from "./sub/project-modal";
+
+export default function Page() {
+  const ref = useRef();
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setSelectedProject(null);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
 
   return (
     <div id="project">
       <Headline title="My Projects" subtitle="Real world unique projects" />
-      {projects.map((project, index) => (
-        <div
-          key={index}
-          className="w-full md:w-3/4 lg:w-3/4 bg-gradient-box mx-auto my-20 md:flex items-stretch rounded-lg shadow-shadow1"
-        >
-          <div className="md:w-2/5 lg:w-2/5 shadow-shadow1 overflow-hidden group">
-            <Image
-              src={project.image}
-              alt="screenshot"
-              className="w-full h-full object-cover rounded-lg lg:rounded-tr-none lg:rounded-br-none transition-transform duration-300 group-hover:scale-110"
-            />
-          </div>
-          <div className="w-full md:w-3/5 lg:w-3/5 bg-transparent p-5 md:p-12 rounded-tr-lg rounded-br-lg">
-            <div className="flex items-center gap-3 flex-wrap">
-              {project.bio.split(" + ").map((item, index) => (
-                <p
-                  key={index}
-                  className={`text-sm text-slate-500 rounded-2xl p-1 ${
-                    colors[index % colors.length]
-                  }`}
-                >
-                  {item}
-                </p>
-              ))}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="bg-gradient-box rounded-lg shadow-shadow1 overflow-hidden cursor-pointer group"
+            onClick={() => setSelectedProject(project)}
+          >
+            <div className="relative h-48 transform transition-transform group-hover:scale-105">
+              <Image
+                src={project.image}
+                alt={project.title}
+                className="object-cover"
+                fill
+              />
             </div>
-
-            <h1 className="text-4xl text-heading font-bold py-2">
-              {project.title}
-            </h1>
-            <p className="text-body">{project.info}</p>
-
-            <HLine className="my-5 w-full" />
-
-            <div className="flex gap-5">
-              <Link href={project.source} target="_blank">
-                <Button
-                  type="button"
-                  variant="rect"
-                  text="small"
-                  className="font-normal p-2"
-                >
-                  <FaCode />
-                  Source Code
-                </Button>
-              </Link>
-              <Link href={project.live} target="_blank">
-                <Button
-                  type="button"
-                  variant="rect"
-                  text="small"
-                  className="font-normal p-2"
-                >
-                  <IoMdBrowsers />
-                  Live Preview
-                </Button>
-              </Link>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2 text-heading">
+                {project.title}
+              </h3>
+              <p className="text-body line-clamp-2">{project.info}</p>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
-      <Button
-        type="link"
-        href="/projects"
-        variant="rect"
-        text="small"
-        className="w-fit mx-auto text-primary"
-      >
-        Explore All Projects *
-      </Button>
+      {selectedProject && (
+        <ProjectModal
+          ref={ref}
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </div>
   );
 }
