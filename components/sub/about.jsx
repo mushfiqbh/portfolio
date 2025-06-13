@@ -3,6 +3,7 @@
 import Button from "../ui/Button";
 import Typewriter from "../ui/typewritter";
 import { PiReadCvLogoFill } from "react-icons/pi";
+import { MdOutlineConnectWithoutContact } from "react-icons/md";
 import {
   FaCopy,
   FaLinkedinIn,
@@ -13,11 +14,35 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { CiLocationOn, CiMail } from "react-icons/ci";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 export default function AboutInfo() {
+  const contactRef = useRef(null);
+  const [position, setPosition] = useState("translate-y-72");
+  const [isCopied, setIsCopied] = useState(false);
+
   const handleCopy = () => {
+    if (isCopied) return;
+    setIsCopied(true);
     navigator.clipboard.writeText("mushfiqbh@gmail.com");
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2000);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (contactRef.current && !contactRef.current.contains(event.target)) {
+        setPosition("translate-y-72");
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  });
 
   return (
     <div className="w-full xl:w-1/2 p-7 xl:p-20 bg-background text-body">
@@ -36,10 +61,16 @@ export default function AboutInfo() {
       <div className="flex items-center">
         <CiMail className="text-xl text-primary" />
         <p>&nbsp;mushfiqbh@gmail.com</p>
-        <FaCopy onClick={handleCopy} className="hover:text-primary mx-2 cursor-pointer" />
+
+        {isCopied && <span className="text-primary ml-2">Copied!</span>}
+        <FaCopy
+          onClick={handleCopy}
+          className="hover:text-primary mx-2 cursor-pointer"
+        />
       </div>
 
       <br />
+
       <div className="flex flex-wrap items-center gap-5">
         <Button
           type="link"
@@ -53,76 +84,86 @@ export default function AboutInfo() {
         </Button>
 
         <Button
-          type="link"
-          href="https://www.linkedin.com/in/mushfiqbh/"
-          target="_blank"
           variant="rect"
           text="large"
-          className="group"
+          onClick={() =>
+            setPosition(
+              position === "translate-y-0" ? "translate-y-72" : "translate-y-0"
+            )
+          }
         >
-          <FaLinkedinIn />
-          <p className="text-sm hidden group-hover:inline">LinkedIn</p>
+          <MdOutlineConnectWithoutContact />
+          <p className="text-sm">Contact Me</p>
         </Button>
 
-        <Button
-          type="link"
-          href="https://wa.me/8801737542444"
-          target="_blank"
-          variant="rect"
-          text="large"
-          className="group"
+        <div
+          ref={contactRef}
+          className={`w-full md:w-fit min-h-20 fixed z-30 left-0 bottom-0 transform ${position} transition-transform duration-300 ease-in-out`}
         >
-          <FaWhatsapp />
-          <p className="text-sm hidden group-hover:inline">Whatsapp</p>
-        </Button>
+          <div className="flex flex-col md:flex-row md:ml-20 bg-gradient-box border-t-2 border-primary rounded-lg shadow-lg">
+            <Link
+              href="https://wa.me/8801737542444"
+              target="_blank"
+              variant="rect"
+              text="large"
+              className="flex items-center gap-3 px-5 py-3 hover:text-primary"
+            >
+              <FaWhatsapp />
+              <p>Whatsapp</p>
+            </Link>
 
-        <Button
-          type="link"
-          href="mailto:mushfiqbh@gmail.com"
-          target=""
-          variant="rect"
-          text="large"
-          className="group"
-        >
-          <MdEmail />
-          <p className="text-sm hidden group-hover:inline">Email</p>
-        </Button>
-
-        <Button
-          type="link"
-          href="https://www.x.com/mushfiqbh"
-          target="_blank"
-          variant="rect"
-          text="large"
-          className="group"
-        >
-          <FaXTwitter />
-          <p className="text-sm hidden group-hover:inline">Twitter</p>
-        </Button>
-
-        <Button
-          type="link"
-          href="https://www.facebook.com/mushfiqbh"
-          target="_blank"
-          variant="rect"
-          text="large"
-          className="group"
-        >
-          <FaFacebookF />
-          <p className="text-sm hidden group-hover:inline">Facebook</p>
-        </Button>
-
-        <Button
-          type="link"
-          href="https://www.github.com/mushfiqbh"
-          target="_blank"
-          variant="rect"
-          text="large"
-          className="group"
-        >
-          <FaGithub />
-          <p className="text-sm hidden group-hover:inline">Github</p>
-        </Button>
+            <Link
+              href="https://www.linkedin.com/in/mushfiqbh/"
+              target="_blank"
+              variant="rect"
+              text="large"
+              className="flex items-center gap-3 px-5 py-3 hover:text-primary"
+            >
+              <FaLinkedinIn />
+              <p>LinkedIn</p>
+            </Link>
+            <Link
+              href="https://www.github.com/mushfiqbh"
+              target="_blank"
+              variant="rect"
+              text="large"
+              className="flex items-center gap-3 px-5 py-3 hover:text-primary"
+            >
+              <FaGithub />
+              <p>Github</p>
+            </Link>
+            <Link
+              href="mailto:mushfiqbh@gmail.com"
+              target="_blank"
+              variant="rect"
+              text="large"
+              className="flex items-center gap-3 px-5 py-3 hover:text-primary"
+            >
+              <MdEmail />
+              <p>Email</p>
+            </Link>
+            <Link
+              href="https://www.x.com/mushfiqbh"
+              target="_blank"
+              variant="rect"
+              text="large"
+              className="flex items-center gap-3 px-5 py-3 hover:text-primary"
+            >
+              <FaXTwitter />
+              <p>Twitter</p>
+            </Link>
+            <Link
+              href="https://www.facebook.com/mushfiqbh"
+              target="_blank"
+              variant="rect"
+              text="large"
+              className="flex items-center gap-3 px-5 py-3 hover:text-primary"
+            >
+              <FaFacebookF />
+              <p>Facebook</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

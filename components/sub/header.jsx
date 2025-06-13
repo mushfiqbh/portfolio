@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <div
       id="header"
-      className="w-full min-h-20 z-20 flex justify-between items-center px-7 md:px-20 py-5 fixed shadow-md bg-transparent backdrop-blur-md"
+      className="w-screen min-h-20 z-20 flex justify-between items-center px-7 md:px-20 py-5 fixed shadow-md bg-transparent backdrop-blur-md"
     >
       <div>
         <Button
@@ -53,26 +53,23 @@ export default function Header() {
         <Link href="/" className="text-body hover:text-primary">
           HOME
         </Link>
-        <Link href="/#resume" className="text-body hover:text-primary">
+        <Link href="#resume" className="text-body hover:text-primary">
           RESUME
         </Link>
-        <Link href="/#project" className="text-body hover:text-primary">
+        <Link href="#project" className="text-body hover:text-primary">
           PROJECTS
         </Link>
-        <Link href="/#skill" className="text-body hover:text-primary">
+        <Link href="#skill" className="text-body hover:text-primary">
           SKILLS
         </Link>
-        <Link href="/#contribution" className="text-body hover:text-primary">
+        <Link href="#contribution" className="text-body hover:text-primary">
           CONTRIBUTIONS
         </Link>
-        <Link href="/#achievement" className="text-body hover:text-primary">
+        <Link href="#achievement" className="text-body hover:text-primary">
           ACHIEVEMENTS
         </Link>
-        <Link href="/#services" className="text-body hover:text-primary">
+        <Link href="#services" className="text-body hover:text-primary">
           SERVICES
-        </Link>
-        <Link href="/" className="text-body hover:text-primary">
-          CONTACT
         </Link>
       </nav>
 

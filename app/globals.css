@@ -64,3 +64,8 @@ body {
   color: var(--color-body);
   font-family: var(--font-secondary);
 }
+
+/* Borders for debugging */
+/* * {
+  border: 1px solid red;
+} */

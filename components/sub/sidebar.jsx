@@ -58,9 +58,6 @@ export default function Sidebar({ sidebarRef, show, setShow }) {
           >
             SERVICES
           </Link>
-          <Link href="/" className="nav-link text-body hover:text-primary">
-            CONTACT
-          </Link>
         </nav>
       </div>
     )

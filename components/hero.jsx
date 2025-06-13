@@ -1,6 +1,5 @@
 import CPRating from "./sub/cp-rating";
 import AboutInfo from "./sub/about";
-import { ContactUs } from "./contact";
 
 export default function Hero() {
   return (
