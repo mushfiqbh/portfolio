@@ -16,6 +16,8 @@ import Link from "next/link";
 
 export default function RatingsChart() {
   const handle = "mushfiqbh";
+  const apiUrl =
+    "https://lifeinsight-fxbwg5eth6becsc4.southindia-01.azurewebsites.net";
 
   const [ratingsData, setRatingsData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -40,9 +42,7 @@ export default function RatingsChart() {
 
   const fetchCodechefData = async () => {
     try {
-      const response = await fetch(
-        `https://codechef-api.vercel.app/handle/${handle}`
-      );
+      const response = await fetch(`${apiUrl}/api/codechef/${handle}`);
       const data = await response.json();
 
       return data.ratingData.map((entry, index) => ({
