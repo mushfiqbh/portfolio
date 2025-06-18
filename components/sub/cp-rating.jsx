@@ -10,14 +10,11 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Legend,
 } from "recharts";
 import Link from "next/link";
 
 export default function RatingsChart() {
   const handle = "mushfiqbh";
-  const apiUrl =
-    "https://lifeinsight-fxbwg5eth6becsc4.southindia-01.azurewebsites.net";
 
   const [ratingsData, setRatingsData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -40,39 +37,12 @@ export default function RatingsChart() {
     return [];
   };
 
-  const fetchCodechefData = async () => {
-    try {
-      const response = await fetch(`${apiUrl}/api/codechef/${handle}`);
-      const data = await response.json();
-
-      return data.ratingData.map((entry, index) => ({
-        name: `CC #${index + 1}`,
-        codechef: Number(entry.rating),
-      }));
-    } catch (error) {
-      console.error("Codechef fetch failed:", error);
-    }
-    return [];
-  };
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const [cf, cc] = await Promise.all([
-          fetchCodeforcesData(),
-          fetchCodechefData(),
-        ]);
-
-        // Merge both datasets with contest labels
-        const maxLength = Math.max(cf.length, cc.length);
-        const merged = Array.from({ length: maxLength }).map((_, i) => ({
-          name: cf[i]?.name || cc[i]?.name || `#${i + 1}`,
-          codeforces: cf[i]?.codeforces ?? null,
-          codechef: cc[i]?.codechef ?? null,
-        }));
-
-        setRatingsData(merged);
+        const codeforcesData = await fetchCodeforcesData();
+        setRatingsData(codeforcesData);
       } catch {
         throw new Error("Cannot Connect");
       } finally {
@@ -94,14 +64,6 @@ export default function RatingsChart() {
           <p className="text-[12px] text-center mb-2">
             My Problem Solving Rating Progress on&nbsp;
             <Link
-              href={`https://www.codechef.com/users/${handle}`}
-              target="_blank"
-              className="underline"
-            >
-              Codechef
-            </Link>
-            &nbsp;and&nbsp;
-            <Link
               href={`https://codeforces.com/profile/${handle}`}
               target="_blank"
               className="underline"
@@ -117,7 +79,6 @@ export default function RatingsChart() {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
-                <Legend />
                 <Line
                   type="monotone"
                   dataKey="codeforces"
@@ -134,29 +95,6 @@ export default function RatingsChart() {
                           cy={props.cy}
                           r={5}
                           fill="#8884d8"
-                          strokeWidth={1.5}
-                        />
-                      );
-                    }
-                    return null;
-                  }}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="codechef"
-                  stroke="#ff7300"
-                  dot={(props) => {
-                    const max = Math.max(
-                      ...ratingsData.map((d) => d.codechef || 0)
-                    );
-                    if (props.payload.codechef === max) {
-                      return (
-                        <circle
-                          key={`cc-dot-${props.index}`}
-                          cx={props.cx}
-                          cy={props.cy}
-                          r={5}
-                          fill="#ff7300"
                           strokeWidth={1.5}
                         />
                       );

@@ -15,6 +15,7 @@
     "@mui/material": "^6.3.1",
     "@uiw/react-heat-map": "^2.3.2",
     "@vercel/analytics": "^1.5.0",
+    "framer-motion": "^12.18.1",
     "jsdom": "^26.1.0",
     "lucide-react": "^0.487.0",
     "next": "15.1.3",
