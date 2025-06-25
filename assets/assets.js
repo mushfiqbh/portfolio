@@ -144,7 +144,15 @@ export const reviews = [
 
 export const projects = [
   {
-    bio: "NextJs + NodeJs + Mongodb + Redux + Cloudinary + Multilingustic",
+    tech: "OpenRouter + Zapier MCP Server + NextJs + NodeJs + Supabase + Tailwind",
+    title: "AI-Powered Chatbot",
+    info: "Integrates OpenRouter's AI capabilities to provide a responsive and intelligent chatbot experience. It features a sleek UI with real-time chat functionality.",
+    image: handshake,
+    source: "https://github.com/mushfiqbh/lucidai",
+    live: "https://lucidai-nine.vercel.app/",
+  },
+  {
+    tech: "NextJs + NodeJs + Mongodb + Redux + Cloudinary + Multilingustic",
     title: "Learning Health, Emotional, Life Lessons",
     info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
     image: lifeInsight,
@@ -152,7 +160,7 @@ export const projects = [
     live: "https://life-insight-swart.vercel.app/",
   },
   {
-    bio: "NextJs + Typescript + Firebase",
+    tech: "NextJs + Typescript + Firebase",
     title: "Reseller E-Commerce Platform",
     info: "A modern and responsive Multi-vendor online shop with NextJs. It features a sleek UI with role-based user authentication and maintaining order, delivery, payment flawlessly.",
     image: cherrypick,
@@ -160,7 +168,7 @@ export const projects = [
     live: "https://cherrypickshop.vercel.app",
   },
   {
-    bio: "ReactJs + SASS",
+    tech: "ReactJs + SASS",
     title: "Wordle Game, Guess Word",
     info: "A fun and interactive Wordle game built with React. Players have limited attempts to guess a hidden word using feedback on letter accuracy.",
     image: wordle,
@@ -168,7 +176,7 @@ export const projects = [
     live: "https://wordle25.netlify.app/",
   },
   {
-    bio: "ReactJs + Vite + PDFjs",
+    tech: "ReactJs + Vite + PDFjs",
     title: "Auto Front Page Generator",
     info: "Generate front page for assignment and lab report for leading university students",
     image: autocover,
