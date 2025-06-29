@@ -9,7 +9,7 @@ export default function Skill() {
       <Headline title="My Skills" subtitle="I eager to show you" />
       <div className="w-full md:w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <Card title="Languages" Icon={icons.coding}>
-          <Range name="C++" percent={80} Icon={icons.cpp} />
+          <Range name="HTML, CSS" percent={80} Icon={icons.html} />
           <Range name="Python" percent={65} Icon={icons.python} />
           <Range name="Javascript" percent={97} Icon={icons.js} />
           <Range name="Typescript" percent={85} Icon={icons.ts} />

@@ -2,7 +2,16 @@
 
 import React, { useEffect, useState } from "react";
 import { CircularProgress, Paper } from "@mui/material";
-import { LineChart } from "@mui/x-charts/LineChart";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Legend,
+} from "recharts";
 import Link from "next/link";
 
 export default function RatingsChart() {
@@ -45,10 +54,6 @@ export default function RatingsChart() {
     fetchData();
   }, []);
 
-  const xLabels = ratingsData.map((d) => d.name);
-  const yData = ratingsData.map((d) => d.codeforces);
-  const maxRating = Math.max(...yData, 0);
-
   return (
     <div>
       {loading ? (
@@ -68,17 +73,38 @@ export default function RatingsChart() {
             </Link>
           </p>
 
-          <Paper elevation={3}>
-            <LineChart
-              xAxis={[{ scaleType: "point", data: xLabels }]}
-              series={[
-                {
-                  data: yData,
-                  showMark: (props) => yData[props.index] === maxRating,
-                },
-              ]}
-              height={300}
-            />
+          <Paper elevation={3} sx={{ pt: 2, pb: 1, pr: 1, pl: 0 }}>
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart data={ratingsData}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Line
+                  type="monotone"
+                  dataKey="codeforces"
+                  stroke="#8884d8"
+                  dot={(props) => {
+                    const max = Math.max(
+                      ...ratingsData.map((d) => d.codeforces || 0)
+                    );
+                    if (props.payload.codeforces === max) {
+                      return (
+                        <circle
+                          key={`cf-dot-${props.index}`}
+                          cx={props.cx}
+                          cy={props.cy}
+                          r={5}
+                          fill="#8884d8"
+                          strokeWidth={1.5}
+                        />
+                      );
+                    }
+                    return null;
+                  }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
           </Paper>
         </>
       )}

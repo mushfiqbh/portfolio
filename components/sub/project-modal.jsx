@@ -15,11 +15,12 @@ export default function ProjectModal({ ref, project, onClose }) {
     "bg-orange-100",
     "bg-rose-100",
   ];
+
   return (
     <AnimatePresence>
       <motion.div
         className={
-          "fixed inset-0 z-50 overflow-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+          "fixed inset-0 z-50 pt-40 md:pt-0 overflow-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
         }
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -33,7 +34,7 @@ export default function ProjectModal({ ref, project, onClose }) {
           exit={{ scale: 0.9 }}
         >
           {/* Hero Image + Close */}
-          <div className="relative h-20 lg:h-60 w-full">
+          <div className="relative h-40 lg:h-60 w-full">
             <Image
               fill
               src={project.image}
@@ -75,7 +76,7 @@ export default function ProjectModal({ ref, project, onClose }) {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap gap-4">
               <a
                 href={project.live}
                 target="_blank"

@@ -23,6 +23,15 @@ export default function Page() {
     };
   }, [ref]);
 
+  const badgeColors = [
+    "bg-teal-100",
+    "bg-green-100",
+    "bg-yellow-100",
+    "bg-purple-100",
+    "bg-orange-100",
+    "bg-rose-100",
+  ];
+
   return (
     <div id="project">
       <Headline title="My Projects" subtitle="Real world unique projects" />
@@ -43,6 +52,18 @@ export default function Page() {
               />
             </div>
             <div className="p-4">
+              <div className="flex flex-wrap gap-2">
+                {project.tech.split(" + ").map((item, index) => (
+                  <span
+                    key={index}
+                    className={`text-xs p-1 rounded-full text-slate-700 ${
+                      badgeColors[index % badgeColors.length]
+                    }`}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
               <h3 className="text-xl font-semibold mb-2 text-heading">
                 {project.title}
               </h3>

@@ -3,6 +3,7 @@ import client0 from "./client0.png";
 import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
 import handshake from "./handshake.jpg";
+import leadingai from "./leading-ai.png";
 import autocover from "./autocover.png";
 import wordle from "./wordle.png";
 import cherrypick from "./cherrypick.png";
@@ -23,6 +24,7 @@ import { BiLogoMicrosoftTeams } from "react-icons/bi";
 import { GiSkills } from "react-icons/gi";
 import { FcMindMap } from "react-icons/fc";
 import {
+  SiHtml5,
   SiPython,
   SiTypescript,
   SiFirebase,
@@ -39,6 +41,7 @@ import {
 export { headshot, handshake };
 
 export const icons = {
+  html: SiHtml5,
   frontend: MdWeb,
   backend: HiServer,
   database: IoServer,
@@ -144,12 +147,12 @@ export const reviews = [
 
 export const projects = [
   {
-    tech: "OpenRouter + Zapier MCP Server + NextJs + NodeJs + Supabase + Tailwind",
-    title: "AI-Powered Chatbot",
+    tech: "OpenRouter + MCP Server + NextJs + NodeJs + Firebase + Tailwind",
+    title: "LeadingAI: AI-Powered Agentic Chatbot",
     info: "Integrates OpenRouter's AI capabilities to provide a responsive and intelligent chatbot experience. It features a sleek UI with real-time chat functionality.",
-    image: handshake,
-    source: "https://github.com/mushfiqbh/lucidai",
-    live: "https://lucidai-nine.vercel.app/",
+    image: leadingai,
+    source: "https://github.com/mushfiqbh/leadingai",
+    live: "https://leadingai.vercel.app/",
   },
   {
     tech: "NextJs + NodeJs + Mongodb + Redux + Cloudinary + Multilingustic",
