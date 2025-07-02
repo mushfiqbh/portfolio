@@ -85,14 +85,21 @@ export default function ProjectModal({ ref, project, onClose }) {
               >
                 <FaExternalLinkAlt size={16} /> Live Demo
               </a>
-              <a
-                href={project.source}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-400 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
-              >
-                <FaGithub size={16} /> Source Code
-              </a>
+
+              {project.source == "private" ? (
+                <span className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-400 dark:border-gray-600 text-gray-500 dark:text-gray-400 cursor-not-allowed">
+                  <FaGithub size={16} /> Private Source
+                </span>
+              ) : (
+                <a
+                  href={project.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-400 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
+                >
+                  <FaGithub size={16} /> Source Code
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
