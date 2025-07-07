@@ -4,8 +4,11 @@ import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
 import handshake from "./handshake.jpg";
 import leadingai from "./leading-ai.png";
-import autocover from "./autocover.png";
+import leadingaiMobile from "./leadingai-mobile.jpg";
 import wordle from "./wordle.png";
+import ArkLab1 from "./arklab1.png";
+import ArkLab2 from "./arklab2.png";
+import ArkLab3 from "./arklab3.png";
 import cherrypick from "./cherrypick.png";
 import lifeInsight from "./life-insight.png";
 import cert_reactjs from "./react_frontend.png";
@@ -147,18 +150,26 @@ export const reviews = [
 
 export const projects = [
   {
-    tech: "OpenRouter + MCP Server + NextJs + NodeJs + Firebase + Tailwind",
+    tech: "OpenAI + MCP Server + NextJs + NodeJs + Firebase + Zustand + Cloudinary + Tailwind",
     title: "LeadingAI: AI-Powered Agentic Chatbot",
     info: "Integrates OpenRouter's AI capabilities to provide a responsive and intelligent chatbot experience. It features a sleek UI with real-time chat functionality.",
-    image: leadingai,
-    source: "private",
+    images: [leadingai, leadingaiMobile],
+    source: "https://github.com/mushfiqbh/LeadingAIAgent",
     live: "https://leadingai.vercel.app/",
+  },
+  {
+    tech: "NextJs + Tailwind + NextAuth + SSR",
+    title: "ArkLab AI Agents Catalog",
+    info: "A comprehensive catalog of AI agents, showcasing their capabilities and features. It includes a user-friendly interface for browsing and interacting with various AI agents.",
+    images: [ArkLab1, ArkLab2, ArkLab3],
+    source: "https://github.com/mushfiqbh/ArkLab-AI-Agents",
+    live: "https://ark-lab-ai-agents-mushfiq.vercel.app/",
   },
   {
     tech: "NextJs + NodeJs + Mongodb + Redux + Cloudinary + Multilingustic",
     title: "Learning Health, Emotional, Life Lessons",
     info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
-    image: lifeInsight,
+    images: [lifeInsight],
     source: "https://github.com/mushfiqbh/life-insight",
     live: "https://life-insight-swart.vercel.app/",
   },
@@ -166,7 +177,7 @@ export const projects = [
     tech: "NextJs + Typescript + Firebase",
     title: "Reseller E-Commerce Platform",
     info: "A modern and responsive Multi-vendor online shop with NextJs. It features a sleek UI with role-based user authentication and maintaining order, delivery, payment flawlessly.",
-    image: cherrypick,
+    images: [cherrypick],
     source: "https://github.com/mushfiqbh/cherrypick",
     live: "https://cherrypickshop.vercel.app",
   },
@@ -174,17 +185,9 @@ export const projects = [
     tech: "ReactJs + SASS",
     title: "Wordle Game, Guess Word",
     info: "A fun and interactive Wordle game built with React. Players have limited attempts to guess a hidden word using feedback on letter accuracy.",
-    image: wordle,
+    images: [wordle],
     source: "https://github.com/mushfiqbh/wordle-react",
     live: "https://wordle25.netlify.app/",
-  },
-  {
-    tech: "ReactJs + Vite + PDFjs",
-    title: "Auto Front Page Generator",
-    info: "Generate front page for assignment and lab report for leading university students",
-    image: autocover,
-    source: "https://github.com/mushfiqbh/autocover",
-    live: "https://autocover-eight.vercel.app/",
   },
 ];
 

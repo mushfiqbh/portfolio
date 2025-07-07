@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { projects } from "@/assets/assets";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import Headline from "./sub/headline";
 import ProjectModal from "./sub/project-modal";
 
@@ -32,46 +33,127 @@ export default function Page() {
     "bg-rose-100",
   ];
 
+  // Animation variants for the container
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  // Animation variants for individual cards
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      y: -10,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div id="project">
+    <div id="project" className="px-4 sm:px-6 lg:px-0">
       <Headline title="My Projects" subtitle="Real world unique projects" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <motion.div 
+        className="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {projects.map((project, index) => (
-          <div
+          <motion.div
             key={index}
             className="bg-gradient-box rounded-lg shadow-shadow1 overflow-hidden cursor-pointer group"
+            variants={cardVariants}
+            whileHover="hover"
             onClick={() => setSelectedProject(project)}
           >
-            <div className="relative h-48 transform transition-transform group-hover:scale-105">
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="object-cover"
-                fill
-              />
+            <div className="relative h-48 overflow-hidden">
+              <motion.div
+                className="w-full h-full"
+                whileHover={{ scale: 1.1 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              >
+                <Image
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="object-cover"
+                  fill
+                />
+              </motion.div>
             </div>
             <div className="p-4">
-              <div className="flex flex-wrap gap-2">
-                {project.tech.split(" + ").map((item, index) => (
-                  <span
-                    key={index}
+              <motion.div 
+                className="flex flex-wrap gap-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.05 + index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                {project.tech.split(" + ").map((item, techIndex) => (
+                  <motion.span
+                    key={techIndex}
                     className={`text-xs p-1 rounded-full text-slate-700 ${
-                      badgeColors[index % badgeColors.length]
+                      badgeColors[techIndex % badgeColors.length]
                     }`}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ 
+                      delay: 0.1 + index * 0.1 + techIndex * 0.05, 
+                      duration: 0.15 
+                    }}
+                    viewport={{ once: true }}
                   >
                     {item}
-                  </span>
+                  </motion.span>
                 ))}
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-heading">
+              </motion.div>
+              
+              <motion.h3 
+                className="text-xl font-semibold mb-2 text-heading"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
                 {project.title}
-              </h3>
-              <p className="text-body line-clamp-2">{project.info}</p>
+              </motion.h3>
+              
+              <motion.p 
+                className="text-body line-clamp-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25 + index * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                {project.info}
+              </motion.p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {selectedProject && (
         <ProjectModal
