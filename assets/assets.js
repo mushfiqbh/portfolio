@@ -19,8 +19,8 @@ import { IoServer, IoTime } from "react-icons/io5";
 import { FaReact, FaNodeJs } from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { HiServer } from "react-icons/hi";
-import { DiJsBadge } from "react-icons/di";
-import { MdWeb } from "react-icons/md";
+import { DiJsBadge, DiScrum } from "react-icons/di";
+import { MdWeb, MdOutlineCloudSync } from "react-icons/md";
 import { TbCodeAsterisk, TbBrandKotlin, TbBrandDjango } from "react-icons/tb";
 import { FaDocker, FaGitAlt, FaInfinity, FaAws, FaTools } from "react-icons/fa";
 import { BiLogoMicrosoftTeams } from "react-icons/bi";
@@ -76,6 +76,8 @@ export const icons = {
   skill: GiSkills,
   mindmap: FcMindMap,
   framework: SiFramework7,
+  zustand: MdOutlineCloudSync,
+  scrum: DiScrum,
 };
 
 export const contributions = [
