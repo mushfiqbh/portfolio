@@ -160,20 +160,20 @@ export const projects = [
     live: "https://leadingai.vercel.app/",
   },
   {
+    tech: "NextJs + NodeJs + Mongodb + Redux + Cloudinary + Multilingustic",
+    title: "CMS Project: Learning Health, Emotional, Life Lessons",
+    info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
+    images: [lifeInsight],
+    source: "https://github.com/mushfiqbh/life-insight",
+    live: "https://life-insight-swart.vercel.app/",
+  },
+  {
     tech: "NextJs + Tailwind + NextAuth + SSR",
     title: "ArkLab AI Agents Catalog",
     info: "A comprehensive catalog of AI agents, showcasing their capabilities and features. It includes a user-friendly interface for browsing and interacting with various AI agents.",
     images: [ArkLab1, ArkLab2, ArkLab3],
     source: "https://github.com/mushfiqbh/ArkLab-AI-Agents",
     live: "https://ark-lab-ai-agents-mushfiq.vercel.app/",
-  },
-  {
-    tech: "NextJs + NodeJs + Mongodb + Redux + Cloudinary + Multilingustic",
-    title: "Learning Health, Emotional, Life Lessons",
-    info: "See how our design improvements on an e-learning platform led to higher engagement, better retention rates, and improved learning outcomes.",
-    images: [lifeInsight],
-    source: "https://github.com/mushfiqbh/life-insight",
-    live: "https://life-insight-swart.vercel.app/",
   },
   {
     tech: "NextJs + Typescript + Firebase",
