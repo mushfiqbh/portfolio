@@ -5,6 +5,7 @@ import client2 from "./client2.jpg";
 import handshake from "./handshake.jpg";
 import leadingai from "./leading-ai.png";
 import leadingaiMobile from "./leadingai-mobile.jpg";
+import leadingAiFigjam from "./LeadingAIFigJam.webp";
 import wordle from "./wordle.png";
 import ArkLab1 from "./arklab1.png";
 import ArkLab2 from "./arklab2.png";
@@ -155,7 +156,7 @@ export const projects = [
     tech: "OpenAI + MCP Server + NextJs + NodeJs + Firebase + Zustand + Cloudinary + Tailwind",
     title: "LeadingAI: AI-Powered Agentic Chatbot",
     info: "Integrates OpenRouter's AI capabilities to provide a responsive and intelligent chatbot experience. It features a sleek UI with real-time chat functionality.",
-    images: [leadingai, leadingaiMobile],
+    images: [leadingAiFigjam, leadingai, leadingaiMobile],
     source: "https://github.com/mushfiqbh/LeadingAI",
     live: "https://leadingai.vercel.app/",
   },
