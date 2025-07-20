@@ -156,7 +156,7 @@ export const projects = [
     title: "LeadingAI: AI-Powered Agentic Chatbot",
     info: "Integrates OpenRouter's AI capabilities to provide a responsive and intelligent chatbot experience. It features a sleek UI with real-time chat functionality.",
     images: [leadingai, leadingaiMobile],
-    source: "https://github.com/mushfiqbh/LeadingAIAgent",
+    source: "https://github.com/mushfiqbh/LeadingAI",
     live: "https://leadingai.vercel.app/",
   },
   {
