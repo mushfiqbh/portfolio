@@ -40,6 +40,8 @@ import {
   SiCodeforces,
   SiCplusplus,
   SiFramework7,
+  SiPhp,
+  SiLaravel,
 } from "react-icons/si";
 
 export { headshot, handshake };
@@ -79,6 +81,8 @@ export const icons = {
   framework: SiFramework7,
   zustand: MdOutlineCloudSync,
   scrum: DiScrum,
+  php: SiPhp,
+  laravel: SiLaravel,
 };
 
 export const contributions = [
