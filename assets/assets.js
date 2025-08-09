@@ -1,4 +1,4 @@
-import headshot from "./headshot.jpg";
+import headshot from "./headshot.png";
 import client0 from "./client0.png";
 import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
