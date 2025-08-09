@@ -43,6 +43,7 @@ import {
   SiPhp,
   SiLaravel,
 } from "react-icons/si";
+import { Database, MessageCircle, GitBranch } from "lucide-react";
 
 export { headshot, handshake };
 
@@ -104,11 +105,6 @@ export const certificates = [
     title: "Frontend Developer (React)",
     url: "https://www.hackerrank.com/certificates/1e260e7d33ff",
     image: cert_reactjs,
-  },
-  {
-    title: "JavaScript (Intermediate)",
-    url: "https://www.hackerrank.com/certificates/ba6a1c07663f",
-    image: cert_js,
   },
   {
     title: "SQL (Advanced)",
@@ -210,4 +206,109 @@ export const projectTypes = [
   "groceryDelivery",
   "workoutTracker",
   "cms",
+];
+
+export const caseStudies = [
+  {
+    id: 1,
+    category: "Problem Solving",
+    title: "Speeding Up Patient Search in a Hospital Management System",
+    icon: Database,
+    color: "from-blue-500 to-cyan-500",
+    background:
+      "Patient search feature was frustrating doctors and staff with 4-second load times, slowing down critical workflows.",
+    challenge:
+      "The system was performing full table scans on three large tables (~50K+ records each) during searches, making it inefficient and resource-heavy.",
+    actions: [
+      "Analyzed the SQL query execution plan to find the performance bottlenecks",
+      "Added indexes to patient_id and doctor_id columns",
+      "Refactored queries using subselects and LIMIT clauses to avoid unnecessary data retrieval",
+      "Introduced server-side caching for frequent search terms",
+    ],
+    results: [
+      "Reduced search time from 4 seconds to under 0.5 seconds",
+      "Server CPU usage during peak hours dropped by ~30%",
+      "Improved user satisfaction, as confirmed by feedback from hospital staff",
+    ],
+    techStack: [
+      "SQL",
+      "Database Optimization",
+      "Query Profiling",
+      "Indexing",
+      "Server-Side Caching",
+    ],
+    metrics: {
+      timeImprovement: "87.5%",
+      cpuReduction: "30%",
+      userSatisfaction: "High",
+    },
+  },
+  {
+    id: 2,
+    category: "Learning Journey",
+    title: "Building a Real-Time Chat Feature for a P2P Escrow Platform",
+    icon: MessageCircle,
+    color: "from-green-500 to-emerald-500",
+    background:
+      "For a P2P escrow platform I was building, real-time communication between buyers and sellers was essential. I had no prior experience with WebSockets or Socket.io.",
+    challenge:
+      "Implementing a secure, scalable chat system that supports concurrent users and persists messages.",
+    actions: [
+      "Learned the fundamentals of WebSockets and Socket.io through official docs and small side projects",
+      "Created a proof-of-concept Node.js chat app to master event handling, namespaces, and rooms",
+      "Integrated the chat into the main platform, ensuring data persistence via Firebase Firestore",
+      "Implemented message encryption and authentication middleware for security",
+    ],
+    results: [
+      "Delivered a real-time chat that supports 100+ concurrent users with no downtime",
+      "Enabled instant buyer-seller communication, reducing deal negotiation time by 40%",
+      "Increased platform trust and engagement, as shown by higher repeat usage rates",
+    ],
+    techStack: [
+      "Socket.io",
+      "Node.js",
+      "Firebase",
+      "WebSocket Protocol",
+      "Security Best Practices",
+    ],
+    metrics: {
+      concurrentUsers: "100+",
+      negotiationTime: "40% faster",
+      uptime: "100%",
+    },
+  },
+  {
+    id: 3,
+    category: "Collaboration Style",
+    title:
+      "Seamless Frontend-Backend Integration for a Research Collaboration Platform",
+    icon: GitBranch,
+    color: "from-purple-500 to-pink-500",
+    background:
+      "As part of a 4-member development team, I was tasked with coordinating the integration between a Laravel backend and React.js frontend.",
+    challenge:
+      "Team members were working on different stacks, and there was a risk of misalignment on API design and data formats, which could delay delivery.",
+    actions: [
+      "Scheduled daily stand-ups to align progress and address blockers early",
+      "Created detailed API documentation via Postman Collections to ensure consistent data exchange",
+      "Organized code walkthroughs for onboarding and knowledge sharing",
+      "Used GitHub Issues and Milestones to keep the project organized and transparent",
+    ],
+    results: [
+      "Delivered the integrated platform two weeks ahead of schedule",
+      "Zero major integration bugs were reported after launch",
+      "Enhanced team synergy and knowledge sharing for future collaborations",
+    ],
+    techStack: [
+      "Agile Workflow",
+      "API Documentation",
+      "GitHub Project Management",
+      "Cross-Team Communication",
+    ],
+    metrics: {
+      delivery: "2 weeks early",
+      bugs: "0 major",
+      teamEfficiency: "Enhanced",
+    },
+  },
 ];

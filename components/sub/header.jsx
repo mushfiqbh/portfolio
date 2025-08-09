@@ -62,6 +62,9 @@ export default function Header() {
         <Link href="#skill" className="text-body hover:text-primary">
           SKILLS
         </Link>
+        <Link href="#case-studies" className="text-body hover:text-primary">
+          CASE STUDIES
+        </Link>
         <Link href="#contribution" className="text-body hover:text-primary">
           CONTRIBUTIONS
         </Link>

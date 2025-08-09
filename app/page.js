@@ -6,6 +6,7 @@ import Presenter from "@/components/sub/presenter";
 import Achievement from "@/components/achievement";
 import Contribution from "@/components/contribution";
 import Services from "@/components/services";
+import CaseStudy from "@/components/case-study";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Resume />
       <Project />
       <Skill />
+      <CaseStudy />
       <Contribution />
       <Achievement />
       <Services />

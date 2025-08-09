@@ -41,6 +41,12 @@ export default function Sidebar({ sidebarRef, show, setShow }) {
             SKILLS
           </Link>
           <Link
+            href="#case-studies"
+            className="nav-link text-body hover:text-primary"
+          >
+            CASE STUDIES
+          </Link>
+          <Link
             href="#contribution"
             className="nav-link text-body hover:text-primary"
           >

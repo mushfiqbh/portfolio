@@ -6,6 +6,7 @@ import Headline from "./sub/headline";
 import Button from "./ui/Button";
 import Image from "next/image";
 import { handshake } from "@/assets/assets";
+import { motion } from "framer-motion";
 
 export default function ContactMe() {
   const [status, setStatus] = useState("Send Now");
@@ -74,9 +75,14 @@ export default function ContactMe() {
             required
           ></textarea>
 
-          <Button type="submit" className="w-full text-primary">
+          <motion.button
+            type="submit"
+            className="px-8 py-3 bg-gradient-red text-white font-semibold rounded-lg hover:shadow-shadow1 transition-shadow duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             {status}
-          </Button>
+          </motion.button>
         </form>
       </div>
     </div>
