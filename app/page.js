@@ -16,9 +16,9 @@ export default function Home() {
       <Resume />
       <Project />
       <Skill />
-      <CaseStudy />
       <Contribution />
       <Achievement />
+      <CaseStudy />
       <Services />
     </main>
   );

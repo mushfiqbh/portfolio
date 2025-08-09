@@ -7,10 +7,14 @@ import Headline from "./sub/headline";
 import { caseStudies } from "@/assets/assets";
 
 const CaseStudy = () => {
-  const [expandedCard, setExpandedCard] = useState(null);
+  const [expandedCards, setExpandedCards] = useState([]);
 
   const toggleCard = (id) => {
-    setExpandedCard(expandedCard === id ? null : id);
+    setExpandedCards(prev => 
+      prev.includes(id) 
+        ? prev.filter(cardId => cardId !== id)
+        : [...prev, id]
+    );
   };
 
   const containerVariants = {
@@ -70,7 +74,7 @@ const CaseStudy = () => {
         >
           {caseStudies.map((study) => {
             const IconComponent = study.icon;
-            const isExpanded = expandedCard === study.id;
+            const isExpanded = expandedCards.includes(study.id);
 
             return (
               <motion.div
