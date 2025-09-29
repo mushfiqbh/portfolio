@@ -84,6 +84,17 @@ export default function AboutInfo() {
         </Button>
 
         <Button
+          type="link"
+          href="https://github.com/mushfiqbh"
+          target="_blank"
+          variant="rect"
+          text="large"
+        >
+          <FaGithub />
+          <p className="text-sm">Github</p>
+        </Button>
+
+        <Button
           variant="rect"
           text="large"
           onClick={() =>

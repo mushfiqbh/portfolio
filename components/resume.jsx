@@ -256,7 +256,7 @@ export default function Resume() {
                   transition={{ delay: 0.15, duration: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Professional WebDev Freelancer
+                  Part-time Laravel Web Developer
                 </motion.h1>
                 <motion.h3
                   initial={{ opacity: 0, x: -20 }}
@@ -264,7 +264,7 @@ export default function Resume() {
                   transition={{ delay: 0.2, duration: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Fiverr (2022 - Present)
+                  MS3 Technology BD (Present)
                 </motion.h3>
               </div>
               <motion.div
@@ -274,7 +274,7 @@ export default function Resume() {
                 viewport={{ once: true }}
               >
                 <Button text="small" className="text-primary">
-                  5.0*
+                  1Yr
                 </Button>
               </motion.div>
             </motion.div>
@@ -294,8 +294,7 @@ export default function Resume() {
               transition={{ delay: 0.35, duration: 0.3 }}
               viewport={{ once: true }}
             >
-              I working on custom web design, full stack web development, figma
-              to website and achiving new experiences with modern projects
+              Working on full-stack commercial web development and achieving new experiences with modern projects
             </motion.div>
           </motion.div>
         </motion.div>

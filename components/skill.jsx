@@ -27,10 +27,10 @@ export default function Skill() {
           <Range name="Zustand" percent={80} Icon={icons.zustand} />
         </Card>
         <Card title="Tools" Icon={icons.tools}>
+          <Range name="C-Panel" percent={50} Icon={icons.cpanel} />
           <Range name="Firebase" percent={60} Icon={icons.firebase} />
           <Range name="GitFlow" percent={90} Icon={icons.git} />
           <Range name="Docker" percent={70} Icon={icons.docker} />
-          <Range name="AWS" percent={50} Icon={icons.aws} />
         </Card>
         <Card title="Soft Skill" Icon={icons.mindmap}>
           <Range name="Teamwork" percent={90} Icon={icons.teamwork} />

@@ -6,14 +6,10 @@ import handshake from "./handshake.jpg";
 import leadingai from "./leading-ai.png";
 import leadingaiMobile from "./leadingai-mobile.jpg";
 import leadingAiFigjam from "./LeadingAIFigJam.webp";
-import wordle from "./wordle.png";
-import ArkLab1 from "./arklab1.png";
-import ArkLab2 from "./arklab2.png";
-import ArkLab3 from "./arklab3.png";
+import BarnomalaSnap from "./barnomala-snap.png";
 import cherrypick from "./cherrypick.png";
 import lifeInsight from "./life-insight.png";
 import cert_reactjs from "./react_frontend.png";
-import cert_js from "./js_intermidiate.png";
 import cert_prob from "./problem_solving_basic.png";
 import cert_sql from "./cert_sql.png";
 import { IoServer, IoTime } from "react-icons/io5";
@@ -23,10 +19,10 @@ import { HiServer } from "react-icons/hi";
 import { DiJsBadge, DiScrum } from "react-icons/di";
 import { MdWeb, MdOutlineCloudSync } from "react-icons/md";
 import { TbCodeAsterisk, TbBrandKotlin, TbBrandDjango } from "react-icons/tb";
-import { FaDocker, FaGitAlt, FaInfinity, FaAws, FaTools } from "react-icons/fa";
+import { FaDocker, FaGitAlt, FaInfinity, FaAws, FaTools, FaDeploydog } from "react-icons/fa";
 import { BiLogoMicrosoftTeams } from "react-icons/bi";
 import { GiSkills } from "react-icons/gi";
-import { FcMindMap } from "react-icons/fc";
+import { FcDeployment, FcMindMap } from "react-icons/fc";
 import {
   SiHtml5,
   SiPython,
@@ -44,6 +40,7 @@ import {
   SiLaravel,
 } from "react-icons/si";
 import { Database, MessageCircle, GitBranch } from "lucide-react";
+import { GrDeploy } from "react-icons/gr";
 
 export { headshot, handshake };
 
@@ -84,6 +81,7 @@ export const icons = {
   scrum: DiScrum,
   php: SiPhp,
   laravel: SiLaravel,
+  cpanel: GrDeploy,
 };
 
 export const contributions = [
@@ -153,12 +151,12 @@ export const reviews = [
 
 export const projects = [
   {
-    tech: "OpenAI + MCP Server + NextJs + NodeJs + Firebase + Zustand + Cloudinary + Tailwind",
-    title: "LeadingAI: AI-Powered Agentic Chatbot",
-    info: "Integrates OpenRouter's AI capabilities to provide a responsive and intelligent chatbot experience. It features a sleek UI with real-time chat functionality.",
-    images: [leadingAiFigjam, leadingai, leadingaiMobile],
-    source: "https://github.com/mushfiqbh/LeadingAI",
-    live: "https://leadingai.vercel.app/",
+    tech: "Laravel + PHP + MySQL + Alpine JS + CPanel",
+    title: "Barnomala - Education Management System",
+    info: "A comprehensive web-based education management system designed to streamline administrative tasks, enhance communication, and improve overall efficiency for educational institutions.",
+    images: [BarnomalaSnap],
+    source: "https://github.com/mushfiqbh/barnomala",
+    live: "https://barnomala.com",
   },
   {
     tech: "NextJs + NodeJs + Mongodb + Redux + Cloudinary + Multilingustic",
@@ -169,14 +167,6 @@ export const projects = [
     live: "https://life-insight-swart.vercel.app/",
   },
   {
-    tech: "NextJs + Tailwind + NextAuth + SSR",
-    title: "ArkLab AI Agents Catalog",
-    info: "A comprehensive catalog of AI agents, showcasing their capabilities and features. It includes a user-friendly interface for browsing and interacting with various AI agents.",
-    images: [ArkLab1, ArkLab2, ArkLab3],
-    source: "https://github.com/mushfiqbh/ArkLab-AI-Agents",
-    live: "https://ark-lab-ai-agents-mushfiq.vercel.app/",
-  },
-  {
     tech: "NextJs + Typescript + Firebase",
     title: "Reseller E-Commerce Platform",
     info: "A modern and responsive Multi-vendor online shop with NextJs. It features a sleek UI with role-based user authentication and maintaining order, delivery, payment flawlessly.",
@@ -185,12 +175,12 @@ export const projects = [
     live: "https://cherrypickshop.vercel.app",
   },
   {
-    tech: "ReactJs + SASS",
-    title: "Wordle Game, Guess Word",
-    info: "A fun and interactive Wordle game built with React. Players have limited attempts to guess a hidden word using feedback on letter accuracy.",
-    images: [wordle],
-    source: "https://github.com/mushfiqbh/wordle-react",
-    live: "https://wordle25.netlify.app/",
+    tech: "OpenAI + MCP Server + NextJs + NodeJs + Firebase + Zustand + Cloudinary + Tailwind",
+    title: "LeadingAI: AI-Powered Agentic Chatbot",
+    info: "Integrates OpenRouter's AI capabilities to provide a responsive and intelligent chatbot experience. It features a sleek UI with real-time chat functionality.",
+    images: [leadingAiFigjam, leadingai, leadingaiMobile],
+    source: "https://github.com/mushfiqbh/LeadingAI",
+    live: "https://leadingai.vercel.app/",
   },
 ];
 
