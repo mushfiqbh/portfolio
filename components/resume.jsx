@@ -217,8 +217,7 @@ export default function Resume() {
               transition={{ delay: 0.35, duration: 0.3 }}
               viewport={{ once: true }}
             >
-              I learned things in science background. Also worked in extra
-              curricular activities.
+              I learned English, Physics, Chemistry, Mathematics and Biology.
             </motion.div>
           </motion.div>
         </motion.div>
@@ -256,7 +255,7 @@ export default function Resume() {
                   transition={{ delay: 0.15, duration: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Part-time Laravel Web Developer
+                  Senior Full-stack Web Developer
                 </motion.h1>
                 <motion.h3
                   initial={{ opacity: 0, x: -20 }}
@@ -294,7 +293,7 @@ export default function Resume() {
               transition={{ delay: 0.35, duration: 0.3 }}
               viewport={{ once: true }}
             >
-              Working on full-stack commercial web development and achieving new experiences with modern projects
+              Working on full-stack commercial, academic and multi-tenant web projects.
             </motion.div>
           </motion.div>
         </motion.div>

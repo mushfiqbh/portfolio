@@ -7,6 +7,8 @@ import leadingai from "./leading-ai.png";
 import leadingaiMobile from "./leadingai-mobile.jpg";
 import leadingAiFigjam from "./LeadingAIFigJam.webp";
 import BarnomalaSnap from "./barnomala-snap.png";
+import MS3TechSnap from "./ms3tech-snap.png";
+import MS3TechSnap2 from "./ms3tech-snap2.png";
 import cherrypick from "./cherrypick.png";
 import lifeInsight from "./life-insight.png";
 import cert_reactjs from "./react_frontend.png";
@@ -19,7 +21,14 @@ import { HiServer } from "react-icons/hi";
 import { DiJsBadge, DiScrum } from "react-icons/di";
 import { MdWeb, MdOutlineCloudSync } from "react-icons/md";
 import { TbCodeAsterisk, TbBrandKotlin, TbBrandDjango } from "react-icons/tb";
-import { FaDocker, FaGitAlt, FaInfinity, FaAws, FaTools, FaDeploydog } from "react-icons/fa";
+import {
+  FaDocker,
+  FaGitAlt,
+  FaInfinity,
+  FaAws,
+  FaTools,
+  FaDeploydog,
+} from "react-icons/fa";
 import { BiLogoMicrosoftTeams } from "react-icons/bi";
 import { GiSkills } from "react-icons/gi";
 import { FcDeployment, FcMindMap } from "react-icons/fc";
@@ -151,12 +160,20 @@ export const reviews = [
 
 export const projects = [
   {
-    tech: "Laravel + PHP + MySQL + Alpine JS + CPanel",
+    tech: "Laravel + PHP Blade + MySQL + Alpine JS + CPanel",
     title: "Barnomala - Education Management System",
     info: "A comprehensive web-based education management system designed to streamline administrative tasks, enhance communication, and improve overall efficiency for educational institutions.",
     images: [BarnomalaSnap],
-    source: "https://github.com/mushfiqbh/barnomala",
+    source: "private",
     live: "https://barnomala.com",
+  },
+  {
+    tech: "Laravel + PHP Blade + MySQL + Alpine JS + CPanel",
+    title: "MS3 Technology BD - IT Solutions Company",
+    info: "A comprehensive web-based IT solutions platform designed to streamline administrative tasks, enhance communication, and improve overall efficiency for businesses.",
+    images: [MS3TechSnap, MS3TechSnap2],
+    source: "private",
+    live: "https://ms3technology.com.bd",
   },
   {
     tech: "NextJs + NodeJs + Mongodb + Redux + Cloudinary + Multilingustic",
