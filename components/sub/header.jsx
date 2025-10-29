@@ -42,12 +42,12 @@ export default function Header() {
         <Sidebar sidebarRef={sidebarRef} show={show} setShow={setShow} />
       </div>
 
-      <div
+      <marquee
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="w-full md:hidden text-2xl text-center text-slate-500 py-3"
+        className="w-full md:hidden text-sm text-center text-slate-500 py-3 ml-1"
       >
-        .... . .-.. .-.. ---
-      </div>
+        Cross-disciplinary knowledge leads innovation
+      </marquee>
 
       <nav className="hidden md:flex flex-wrap items-center gap-5 text-sm">
         <Link href="/" className="text-body hover:text-primary">
@@ -75,12 +75,6 @@ export default function Header() {
           SERVICES
         </Link>
       </nav>
-
-      <div>
-        <Button type="button" text="large" onClick={toggleTheme} variant="rect">
-          {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
-        </Button>
-      </div>
     </div>
   );
 }
