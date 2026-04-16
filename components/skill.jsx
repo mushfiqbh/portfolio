@@ -16,7 +16,7 @@ export default function Skill() {
         </Card>
         <Card title="Framework" Icon={icons.framework}>
           <Range name="Laravel" percent={85} Icon={icons.laravel} />
-          <Range name="React Js" percent={80} Icon={icons.reactjs} />
+          <Range name="Vue Js" percent={80} Icon={icons.vuejs} />
           <Range name="Next Js" percent={95} Icon={icons.nextjs} />
           <Range name="Node Js" percent={90} Icon={icons.node} />
         </Card>

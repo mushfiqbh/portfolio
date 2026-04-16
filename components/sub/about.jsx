@@ -51,12 +51,11 @@ export default function AboutInfo() {
       </h1>
       <Typewriter />
       <p className="my-2">
-        Currently Pursuing B.Sc. in Computer Science and Engineering at Leading
-        University (3rd Year).
+        Software Engineer @ MS3 Technoloy BD
       </p>
       <div className="flex items-center">
         <CiLocationOn className="text-xl text-primary" />
-        <p>&nbsp;Sylhet, Bangladesh (Remote)</p>
+        <p>&nbsp;Sylhet, Bangladesh</p>
       </div>
       <div className="flex items-center">
         <CiMail className="text-xl text-primary" />

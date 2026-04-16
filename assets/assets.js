@@ -1,4 +1,4 @@
-import headshot from "./headshot.png";
+import headshot from "./headshot.jpeg";
 import client0 from "./client0.png";
 import client1 from "./client1.jpg";
 import client2 from "./client2.jpg";
@@ -6,6 +6,9 @@ import handshake from "./handshake.jpg";
 import leadingai from "./leading-ai.png";
 import leadingaiMobile from "./leadingai-mobile.jpg";
 import leadingAiFigjam from "./LeadingAIFigJam.webp";
+import PlatformSnap from "./platform-snap.png";
+import PlatformAcademic from "./platform-academic.png";
+import PlatformExam from "./platform-exam.png";
 import BarnomalaSnap from "./barnomala-snap.png";
 import MS3TechSnap from "./ms3tech-snap.png";
 import MS3TechSnap2 from "./ms3tech-snap2.png";
@@ -15,7 +18,7 @@ import cert_reactjs from "./react_frontend.png";
 import cert_prob from "./problem_solving_basic.png";
 import cert_sql from "./cert_sql.png";
 import { IoServer, IoTime } from "react-icons/io5";
-import { FaReact, FaNodeJs } from "react-icons/fa6";
+import { FaVuejs, FaNodeJs } from "react-icons/fa6";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { HiServer } from "react-icons/hi";
 import { DiJsBadge, DiScrum } from "react-icons/di";
@@ -59,7 +62,7 @@ export const icons = {
   backend: HiServer,
   database: IoServer,
   devops: FaInfinity,
-  reactjs: FaReact,
+  vuejs: FaVuejs,
   nextjs: RiNextjsLine,
   coding: TbCodeAsterisk,
   cpp: SiCplusplus,
@@ -159,6 +162,14 @@ export const reviews = [
 ];
 
 export const projects = [
+  {
+    tech: "Laravel + Vue.js + MySQL",
+    title: "School Management SAAS Platform",
+    info: "A comprehensive web-based school management system designed to streamline administrative tasks, enhance communication, and improve overall efficiency for educational institutions.",
+    images: [PlatformSnap, PlatformAcademic, PlatformExam],
+    source: "private",
+    live: "https://cloud.barnomala.com",
+  },
   {
     tech: "Laravel + PHP Blade + MySQL + Alpine JS + CPanel",
     title: "Barnomala - Education Management System",
