@@ -1,303 +1,140 @@
-"use client"
+"use client";
 
-import HLine from "./ui/separator";
-import Headline from "./sub/headline";
-import Button from "./ui/Button";
 import { motion } from "framer-motion";
 
-export default function Resume() {
-  // Animation variants for the main container
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1,
-      },
-    },
-  };
+const experience = [
+  {
+    year: "2025 — Present",
+    role: "Senior Full-stack Engineer",
+    company: "MS3 Technology BD",
+    summary:
+      "Building multi-tenant platforms, internal tooling, and scalable backend systems.",
+    stack: ["Laravel", "NextJS", "PostgreSQL", "MySQL", "Redis"],
+  },
+];
 
-  // Animation variants for section headers
-  const headerVariants = {
-    hidden: {
-      opacity: 0,
-      y: -30,
-      scale: 0.9,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
-      },
-    },
-  };
+const education = [
+  {
+    year: "2023 — Present",
+    role: "BSc in CSE",
+    company: "Leading University",
+    summary:
+      "Focused on system design, distributed systems, algorithms, and software architecture.",
+    stack: ["System Design", "DSA", "Distributed Systems"],
+  },
+];
 
-  // Animation variants for cards
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
-      scale: 0.95,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-    hover: {
-      y: -5,
-      scale: 1.02,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut",
-      },
-    },
-  };
-
-  // Animation variants for column containers
-  const columnVariants = {
-    hidden: { opacity: 0, x: 0 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.05,
-      },
-    },
-  };
-
+export default function HeroExperience() {
   return (
-    <div id="resume" className="px-4 sm:px-6 lg:px-0">
-      <Headline title="My Resume" subtitle="1+ years of experiences" />
+    <motion.div
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="w-full max-w-md space-y-8"
+    >
+      {/* heading */}
+      <div className="space-y-2">
+        <p className="text-xs tracking-[0.2em] uppercase text-zinc-500">
+          Experience
+        </p>
 
-      <motion.div
-        className="w-full md:w-3/4 mx-auto md:flex gap-10 mt-8 md:mt-12"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-      >
-        {/* Education Column */}
-        <motion.div className="w-full md:w-1/2 space-y-6 md:space-y-10" variants={columnVariants}>
-          <motion.h2
-            className="h-20 text-2xl text-primary font-bold flex items-center justify-center bg-gradient-box rounded-lg shadow-shadow1"
-            variants={headerVariants}
-            whileHover={{ scale: 1.05 }}
-          >
-            Educational Quality
-          </motion.h2>
+        <div className="h-px w-full bg-zinc-800" />
+      </div>
 
+      {/* timeline */}
+      <div className="space-y-8">
+        {experience.map((item, index) => (
           <motion.div
-            className="min-h-80 p-10 bg-gradient-box rounded-lg shadow-shadow1"
-            variants={cardVariants}
-            whileHover="hover"
+            key={index}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className="group space-y-3"
           >
-            <motion.div
-              className="w-full flex justify-between"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
+            {/* top row */}
+            <div className="flex items-start justify-between gap-4">
               <div>
-                <motion.h1
-                  className="text-2xl font-bold md:text-3xl mb-2"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.15, duration: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Computer Science & Engineering
-                </motion.h1>
-                <motion.h3
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, duration: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Leading University (2023 - Present)
-                </motion.h3>
+                <h3 className="text-base font-medium text-white">
+                  {item.role}
+                </h3>
+
+                <p className="text-sm text-zinc-400">{item.company}</p>
               </div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.25, duration: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Button text="small" className="text-primary">
-                  3.8
-                </Button>
-              </motion.div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scaleX: 0 }}
-              whileInView={{ opacity: 1, scaleX: 1 }}
-              transition={{ delay: 0.3, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <HLine className="w-full my-5 md:my-7" />
-            </motion.div>
+              <span className="text-xs text-zinc-500 whitespace-nowrap">
+                {item.year}
+              </span>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
-              I have been learning Data Structures and Algorithm, System design,
-              competitive programming etc.
-            </motion.div>
+            {/* description */}
+            <p className="text-sm leading-6 text-zinc-500">{item.summary}</p>
+
+            {/* stack */}
+            <div className="flex flex-wrap gap-2">
+              {item.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs text-zinc-400 border border-zinc-800 rounded-full px-3 py-1"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </motion.div>
+        ))}
+      </div>
+      
+      {/* heading */}
+      <div className="space-y-2">
+        <p className="text-xs tracking-[0.2em] uppercase text-zinc-500">
+          Education
+        </p>
 
+        <div className="h-px w-full bg-zinc-800" />
+      </div>
+
+      {/* timeline */}
+      <div className="space-y-8">
+        {education.map((item, index) => (
           <motion.div
-            className="min-h-80 p-10 bg-gradient-box rounded-lg shadow-shadow1"
-            variants={cardVariants}
-            whileHover="hover"
+            key={index}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            className="group space-y-3"
           >
-            <motion.div
-              className="w-full flex justify-between"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
+            {/* top row */}
+            <div className="flex items-start justify-between gap-4">
               <div>
-                <motion.h1
-                  className="text-2xl font-bold md:text-3xl mb-2"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.15, duration: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  A Level HSC Certificate
-                </motion.h1>
-                <motion.h3
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, duration: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  BAF Shaheen College, Shamshernagar (2019 - 2022)
-                </motion.h3>
+                <h3 className="text-base font-medium text-white">
+                  {item.role}
+                </h3>
+
+                <p className="text-sm text-zinc-400">{item.company}</p>
               </div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.25, duration: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Button text="small" className="text-primary">
-                  5.0
-                </Button>
-              </motion.div>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scaleX: 0 }}
-              whileInView={{ opacity: 1, scaleX: 1 }}
-              transition={{ delay: 0.3, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <HLine className="w-full my-5 md:my-7" />
-            </motion.div>
+              <span className="text-xs text-zinc-500 whitespace-nowrap">
+                {item.year}
+              </span>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
-              I learned English, Physics, Chemistry, Mathematics and Biology.
-            </motion.div>
-          </motion.div>
-        </motion.div>
+            {/* description */}
+            <p className="text-sm leading-6 text-zinc-500">{item.summary}</p>
 
-        {/* Experience Column */}
-        <motion.div
-          className="w-full md:w-1/2 mt-16 md:mt-0 space-y-6 md:space-y-10"
-          variants={columnVariants}
-        >
-          <motion.h2
-            className="h-20 text-2xl text-primary font-bold flex items-center justify-center bg-gradient-box rounded-lg shadow-shadow1"
-            variants={headerVariants}
-            whileHover={{ scale: 1.05 }}
-          >
-            Job Experiences
-          </motion.h2>
-
-          <motion.div
-            className="min-h-80 p-10 bg-gradient-box rounded-lg shadow-shadow1"
-            variants={cardVariants}
-            whileHover="hover"
-          >
-            <motion.div
-              className="w-full flex justify-between"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div>
-                <motion.h1
-                  className="text-2xl font-bold md:text-3xl mb-2"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.15, duration: 0.3 }}
-                  viewport={{ once: true }}
+            {/* stack */}
+            <div className="flex flex-wrap gap-2">
+              {item.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-xs text-zinc-400 border border-zinc-800 rounded-full px-3 py-1"
                 >
-                  Senior Full-stack Web Developer
-                </motion.h1>
-                <motion.h3
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, duration: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  MS3 Technology BD (Present)
-                </motion.h3>
-              </div>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.25, duration: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <Button text="small" className="text-primary">
-                  1Yr
-                </Button>
-              </motion.div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scaleX: 0 }}
-              whileInView={{ opacity: 1, scaleX: 1 }}
-              transition={{ delay: 0.3, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <HLine className="w-full my-5 md:my-7" />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.35, duration: 0.3 }}
-              viewport={{ once: true }}
-            >
-              Working on full-stack commercial, academic and multi-tenant web projects.
-            </motion.div>
+                  {tech}
+                </span>
+              ))}
+            </div>
           </motion.div>
-        </motion.div>
-      </motion.div>
-    </div>
+        ))}
+      </div>
+    </motion.div>
   );
 }

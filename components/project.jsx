@@ -1,29 +1,12 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import { projects } from "@/assets/assets";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Headline from "./sub/headline";
-import ProjectModal from "./sub/project-modal";
+import ImageSlider from "./sub/image-slder";
 
 export default function Page() {
-  const ref = useRef();
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        setSelectedProject(null);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-
   const badgeColors = [
     "bg-teal-100",
     "bg-green-100",
@@ -46,7 +29,7 @@ export default function Page() {
   };
 
   // Animation variants for individual cards
-  const cardVariants = {
+  const rowVariants = {
     hidden: { 
       opacity: 0, 
       y: 50,
@@ -72,96 +55,128 @@ export default function Page() {
   };
 
   return (
-    <div id="project" className="px-4 sm:px-6 lg:px-0">
-      <Headline title="My Projects" subtitle="Real world unique projects" />
+    <section
+      id="project"
+      className="px-4 sm:px-6 lg:px-0 py-16"
+    >
+      <Headline
+        title="Selected Projects"
+        subtitle="Engineer who solves hard problems"
+      />
 
-      <motion.div 
-        className="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+      <motion.div
+        className="max-w-6xl mx-auto mt-20 space-y-28"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, amount: 0.08 }}
       >
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            className="bg-gradient-box rounded-lg shadow-shadow1 overflow-hidden cursor-pointer group"
-            variants={cardVariants}
-            whileHover="hover"
-            onClick={() => setSelectedProject(project)}
-          >
-            <div className="relative h-48 overflow-hidden">
-              <motion.div
-                className="w-full h-full"
-                whileHover={{ scale: 1.1 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-              >
-                <Image
-                  src={project.images[0]}
-                  alt={project.title}
-                  className="object-cover"
-                  fill
-                />
-              </motion.div>
-            </div>
-            <div className="p-4">
-              <motion.div 
-                className="flex flex-wrap gap-2"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.05 + index * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                {project.tech.split(" + ").map((item, techIndex) => (
-                  <motion.span
-                    key={techIndex}
-                    className={`text-xs p-1 rounded-full text-slate-700 ${
-                      badgeColors[techIndex % badgeColors.length]
-                    }`}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ 
-                      delay: 0.1 + index * 0.1 + techIndex * 0.05, 
-                      duration: 0.15 
-                    }}
-                    viewport={{ once: true }}
-                  >
-                    {item}
-                  </motion.span>
-                ))}
-              </motion.div>
-              
-              <motion.h3 
-                className="text-xl font-semibold mb-2 text-heading"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                {project.title}
-              </motion.h3>
-              
-              <motion.p 
-                className="text-body line-clamp-2"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 + index * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-              >
-                {project.info}
-              </motion.p>
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
+        {projects.map((project, index) => {
+          const reversed = index % 2 !== 0;
 
-      {selectedProject && (
-        <ProjectModal
-          ref={ref}
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
-      )}
-    </div>
+          return (
+            <motion.div
+              key={index}
+              variants={rowVariants}
+              className={`
+                grid lg:grid-cols-2 gap-10 lg:gap-20 items-center cursor-pointer group
+              `}
+            >
+              <ImageSlider project={project} reversed={reversed} />
+
+              {/* CONTENT */}
+              <div
+                className={`
+                  space-y-6
+                  ${reversed ? "lg:order-1" : ""}
+                `}
+              >
+                {/* small label */}
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-xs uppercase tracking-[0.2em] text-zinc-500"
+                >
+                  Selected Work {String(index + 1).padStart(2, "0")}
+                </motion.p>
+
+                {/* title */}
+                <motion.h2
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15 }}
+                  viewport={{ once: true }}
+                  className="text-3xl md:text-4xl font-semibold tracking-tight"
+                >
+                  {project.title}
+                </motion.h2>
+
+                {/* description */}
+                <motion.p
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-zinc-400 leading-7 max-w-xl"
+                >
+                  {project.description}
+                </motion.p>
+
+                {/* tech */}
+                <motion.div
+                  initial={{ opacity: 0, y: 14 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.25 }}
+                  viewport={{ once: true }}
+                  className="flex flex-wrap gap-3"
+                >
+                  {project.tech.map((tech, techIndex) => (
+                    <motion.div
+                      key={techIndex}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{
+                        delay: 0.3 + techIndex * 0.03,
+                        duration: 0.2,
+                      }}
+                      viewport={{ once: true }}
+                      className="
+                        flex items-center gap-2
+                        text-sm text-zinc-300
+                        border border-zinc-800
+                        rounded-full
+                        px-3 py-1.5
+                        bg-zinc-900/40
+                      "
+                    >
+                      {tech.Icon && (
+                        <tech.Icon className="w-5 h-5" />
+                      )}
+
+                      <span>{tech.name}</span>
+                    </motion.div>
+                  ))}
+                </motion.div>
+
+                {/* subtle CTA */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="pt-2"
+                >
+                  <a href={ project.live } target="_blank" rel="noopener noreferrer" className="text-sm group-hover:text-zinc-300 transition-colors">
+                    Live View →
+                  </a>
+                </motion.div>
+              </div>
+            </motion.div>
+          );
+        })}
+      </motion.div>
+    </section>
   );
 }
